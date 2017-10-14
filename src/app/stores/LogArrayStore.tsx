@@ -1,8 +1,8 @@
-import { observable, action } from 'mobx';
+import {observable, action, computed} from 'mobx';
 import {  } from '../models';
-import {ILogModel} from "../models/LogModel";
+import {ILogModel} from "../models/ILogModel";
 
-export class LogsStore {
+export class LogArrayStore {
 
   constructor(defaults: ILogModel[]) {
     this.logs = defaults;
@@ -14,7 +14,10 @@ export class LogsStore {
   @observable
   public logs: Array<ILogModel>;
 
-
+  @computed
+  get viewLogs() {
+      return this.logs;
+  }
   @action
   addLog(item: ILogModel): void {
     this.logs.push(item);
@@ -36,4 +39,4 @@ export class LogsStore {
   }
 }
 
-export default LogsStore;
+export default LogArrayStore;

@@ -1,5 +1,4 @@
-import {ILogModel} from './LogModel';
-import {IRollingLogModel} from './RollingLogModel';
-import {LogType} from "./LogType";
+import {ILogModel} from './ILogModel';
+import {ISpecialLogModelModel} from './ISpecialLogModelModel';
 
-export { ILogModel,IRollingLogModel, LogType };
+export { ILogModel,ISpecialLogModelModel };

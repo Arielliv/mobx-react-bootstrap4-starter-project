@@ -3,8 +3,9 @@
  */
 import * as React from 'react';
 import * as classNames from 'classnames';
-import {ILogModel} from '../../models/LogModel';
+import {ILogModel} from '../../models/ILogModel';
 import {SpecialLog} from '../SpecialLog/index'
+import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import RegularExpression from "../RegularExpression/index";
 
@@ -69,18 +70,29 @@ export class Log extends React.Component<LogProps, LogState> {
 
     render() {
         let regularExpressionLoop = this.state.regularExpressionArray.map(obj => {
-            return <RegularExpression key={obj.id} onRemoveRegularExpression={() => {this.onRemoveRegularExpression(obj.id)}} onChangeRegularExpression={(rugularExp:string) => {this.onChangeRegularExpression(obj.id,rugularExp)}}/>
+            return <RegularExpression key={obj.id} onRemoveRegularExpression={() => {this.onRemoveRegularExpression(obj.id)}} onChangeRegularExpression={(regularExp:string) => {this.onChangeRegularExpression(obj.id,regularExp)}}/>
         });
+        const divStyle = {
+            color: 'red',
+        };
         return (
             <div >
-                <FormGroup className="form-row">
+                <AvGroup className="form-row">
                     <Label for="name" className="col-12 p-0">שם לוג</Label>
-                    <Input type="text" name="name" id="name" placeholder="הכנס טקסט" className="col-12" onChange={this.onChangeName}/>
-                </FormGroup>
-                <FormGroup className="form-row">
-                    <Label for="name" className="col-12 p-0">נתיב לוג</Label>
-                    <Input type="text" name="name" id="name" placeholder="הכנס טקסט" className="col-12" onChange={this.onChangePath}/>
-                </FormGroup>
+                    <AvInput type="text" name="name" id="name" placeholder="הכנס טקסט" className="col-12" onChange={this.onChangeName} required />
+                    {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
+                    <div style={divStyle}>
+                        <AvFeedback >לא הוכנס שם לוג</AvFeedback>
+                    </div>
+                </AvGroup>
+                <AvGroup className="form-row">
+                    <Label for="name" className="col-12 p-0">שם לוג</Label>
+                    <AvInput type="text" name="path" id="path" placeholder="הכנס טקסט" className="col-12" onChange={this.onChangePath} required />
+                    {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
+                    <div style={divStyle}>
+                        <AvFeedback >לא הוכנס נתיב לוג</AvFeedback>
+                    </div>
+                </AvGroup>
                 {regularExpressionLoop}
                 <div className="form-row">
                     <div className="col-1 d-inline-block">

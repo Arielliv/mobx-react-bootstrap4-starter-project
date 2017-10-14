@@ -3,6 +3,7 @@
  */
 import * as React from 'react';
 import { Log } from '../Log/';
+import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 // import * as style from './style.css';
 
@@ -18,19 +19,40 @@ export class SpecialLog extends React.Component<SpecialLogProps,SpecialLogState>
     constructor(props) {
         super(props);
         this.state = { startLine: "" , endLine : ""};
+        this.onChangeStartLine = this.onChangeStartLine.bind(this);
+        this.onChangeEndLine = this.onChangeEndLine.bind(this);
+    }
+
+    onChangeStartLine(e){
+        this.setState({startLine:e.target.value});
+    }
+
+    onChangeEndLine(e){
+        this.setState({endLine:e.target.value});
     }
 
     render() {
+        const divStyle = {
+            color: 'red',
+        };
         return(
             <div className="row">
-                <FormGroup className="col-6 ">
+                <AvGroup className="col-6">
                     <Label for="startLine" className="col-4 p-0">תחילת שורת לוג</Label>
-                    <Input type="text" name="startLine" id="startLine" placeholder="הכנס טקסט" className="col-12"/>
-                </FormGroup>
-                <FormGroup className="col-6 ">
+                    <AvInput type="text" name="startLine" id="startLine" placeholder="הכנס טקסט" className="col-12" onChange={this.onChangeStartLine} required />
+                    {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
+                    <div style={divStyle}>
+                        <AvFeedback >לא הוכנס תחילת שורת לוג</AvFeedback>
+                    </div>
+                </AvGroup>
+                <AvGroup className="col-6">
                     <Label for="endLine" className="col-4 p-0">סיום שורת לוג</Label>
-                    <Input type="text" name="endLine" id="endLine" placeholder="הכנס טקסט" className="col-12"/>
-                </FormGroup>
+                    <AvInput type="text" name="endLine" id="endLine" placeholder="הכנס טקסט" className="col-12" onChange={this.onChangeEndLine} required />
+                    {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
+                    <div style={divStyle}>
+                        <AvFeedback >לא הוכנס סוף שורת לוג</AvFeedback>
+                    </div>
+                </AvGroup>
             </div>
         );
     }
