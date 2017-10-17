@@ -3,7 +3,7 @@ export interface ILogModel {
   id : string;
   name : string
   path : string
-  regularExpression : Array<string>
+  regularExpressions : Array<string>
   typeRolling: string
   typeSpecial : string
 }

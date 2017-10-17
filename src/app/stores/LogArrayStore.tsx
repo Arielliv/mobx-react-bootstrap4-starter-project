@@ -18,6 +18,10 @@ export class LogArrayStore {
   get viewLogs() {
       return this.logs;
   }
+  @computed
+  get logsCount() {
+      return this.logs.length;
+  }
   @action
   addLog(item: ILogModel): void {
     this.logs.push(item);
@@ -39,4 +43,4 @@ export class LogArrayStore {
   }
 }
 
-export default LogArrayStore;
+export default LogArrayStore ;

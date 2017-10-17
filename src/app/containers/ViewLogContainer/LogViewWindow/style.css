@@ -1,0 +1,25 @@
+
+
+.shadowBorder{
+    min-height: 540px;
+    max-height: 540px;
+    background-color: white;
+    overflow-y:auto;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2),
+    0 25px 50px 0 rgba(0, 0, 0, .1);
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2),
+    0 25px 50px 0 rgba(0, 0, 0, .1);
+}
+.shadowBorder::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.shadowBorder::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #828282;
+}

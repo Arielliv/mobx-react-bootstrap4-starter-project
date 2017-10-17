@@ -43,7 +43,7 @@ export class RegularExpression extends React.Component<RegularExpressionProps, R
                 <AvGroup className="form-row">
                     <Label for="regularExpression" className="col-12 ">ביטוי רגולרי</Label>
                     <div className="col-1 d-inline-block">
-                        <button type="button" className="btn btn-outline-danger  col-12 " onClick={this.onClickRemoveRegularExpression.bind(this)}>X</button>
+                        <button type="button" className="btn btn-outline-danger  col-12 " onClick={this.onClickRemoveRegularExpression}>X</button>
                     </div>
                     <AvInput type="text" name={this.state.id}  placeholder="הכנס טקסט" className="col-11  form-control d-inline-block " onChange={this.onChangeRegularExpression} required />
                     {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}

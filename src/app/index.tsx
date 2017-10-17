@@ -9,9 +9,13 @@ import { Router, Route, Switch } from 'react-router';
 import { ILogModel } from './models/ILogModel';
 import {LogArrayStore} from "./stores/LogArrayStore";
 import {RouterStore} from "./stores/RouterStore";
-import Form from "./containers/Form/index";
+import Form from "./containers/BuildLogContainer/Form/index";
 import {STORE_LOG_ARRAY, STORE_ROUTER} from "./constants/stores";
 import {Root} from "./containers/Root/index";
+import SpecialLog from "./components/BuildLogComponents/SpecialLog/index";
+import LogView from "./components/ViewLogComponents/LogView/index";
+import NavBarContainer from "./components/GeneralComponents/NavBarContainer/index";
+import Main, {default as MainRoutes} from "./containers/GeneralContainer/MainRoutes/index";
 
 
 
@@ -41,9 +45,9 @@ ReactDOM.render(
 <Provider {...rootStores} >
         <Root>
             <Router history={history} >
-                <Switch>
-                    <Route path="/" component={Form} />
-                </Switch>
+                    <Switch>
+                        <Route  path="/" component={MainRoutes} />
+                    </Switch>
             </Router>
         </Root>
     </Provider >,

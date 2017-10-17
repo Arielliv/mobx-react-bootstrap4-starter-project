@@ -35,14 +35,14 @@ export class Body extends React.Component<BodyProps,BodyState> {
     }
 
     render() {
-        const style1 = style.containerCostume + " container pb-2";
+        // const style1 = style.containerCostume + " container pb-2";
         const  style2 = style.shadowBorder + " col-12 p-0";
         const divStyle = {
             color: 'red',
         };
         // const SpecialLog=
         return(
-            <div className={style1}>
+            <div className="container pb-2">
                 <div className="row justify-content-center">
                     <h1 className="h1 col-6 text-center">פרוייקט חפיפה</h1>
                 </div>

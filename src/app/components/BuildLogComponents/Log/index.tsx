@@ -3,7 +3,7 @@
  */
 import * as React from 'react';
 import * as classNames from 'classnames';
-import {ILogModel} from '../../models/ILogModel';
+import {ILogModel} from '../../../models/ILogModel';
 import {SpecialLog} from '../SpecialLog/index'
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
