@@ -1,14 +1,12 @@
 import {inject} from "mobx-react";
 import {STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
-import {Route, RouteComponentProps, Router, Switch} from "react-router";
+import { RouteComponentProps} from "react-router";
 import {LOG_FILTER_LOCATION_HASH, LogFilter} from "../../../constants/appRouts";
 import * as React from "react";
 import NavBarContainer from "../../../components/GeneralComponents/NavBarContainer/index";
 import LogArrayStore from "../../../stores/LogArrayStore";
 import * as style from './style.css';
 import RouterStore from "../../../stores/RouterStore";
-import Form from "../../BuildLogContainer/Form/index";
-import LogView from "../../../components/ViewLogComponents/LogView/index";
 import createBrowserHistory from "history/createBrowserHistory";
 
 export interface MainRoutesProps extends RouteComponentProps<any> {
@@ -40,11 +38,11 @@ export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState>
     }
 
     checkLocationChange() {
-        // const router = this.props[STORE_ROUTER] as RouterStore;
-        // const filter = Object.keys(LOG_FILTER_LOCATION_HASH)
-        //     .map((key) => Number(key) as TodoFilter)
-        //     .find((filter) => LOG_FILTER_LOCATION_HASH[filter] === router.location.hash);
-        // this.setState({ filter });
+        const router = this.props[STORE_ROUTER] as RouterStore;
+        const filter = Object.keys(LOG_FILTER_LOCATION_HASH)
+            .map((key) => key as LogFilter)
+            .find((filter) => LOG_FILTER_LOCATION_HASH[filter] === router.location.hash);
+        this.setState({ filter });
     }
 
     handleFilter(filter: LogFilter) {

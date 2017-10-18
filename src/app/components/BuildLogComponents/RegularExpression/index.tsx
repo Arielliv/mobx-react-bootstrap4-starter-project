@@ -4,14 +4,16 @@
 import * as React from 'react';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import {IRegularExpression} from "../../../models/RegularExpression";
 
 // import * as style from './style.css';
 
 export interface RegularExpressionState {
     regularExpression : string
-    id : string
+    name : string
 }
 export interface RegularExpressionProps {
+    regularExpressionObject : IRegularExpression
     onRemoveRegularExpression() : void
     onChangeRegularExpression(regularExpression : string)
 }
@@ -20,8 +22,9 @@ export class RegularExpression extends React.Component<RegularExpressionProps, R
 
     constructor(props?: RegularExpressionProps) {
         super(props);
-        let id : string = "regularExpression-" + (Math.floor(Math.random() * 100 ) +1).toString();
-        this.state = { regularExpression: "" , id};
+
+        let name : string = "regularExpression-" + this.props.regularExpressionObject.id;
+        this.state = { regularExpression: this.props.regularExpressionObject.regularExpression , name};
         this.onClickRemoveRegularExpression = this.onClickRemoveRegularExpression.bind(this);
         this.onChangeRegularExpression = this.onChangeRegularExpression.bind(this);
     }
@@ -45,7 +48,7 @@ export class RegularExpression extends React.Component<RegularExpressionProps, R
                     <div className="col-1 d-inline-block">
                         <button type="button" className="btn btn-outline-danger  col-12 " onClick={this.onClickRemoveRegularExpression}>X</button>
                     </div>
-                    <AvInput type="text" name={this.state.id}  placeholder="הכנס טקסט" className="col-11  form-control d-inline-block " onChange={this.onChangeRegularExpression} required />
+                    <AvInput type="text" name={this.state.name}  placeholder="הכנס טקסט" className="col-11  form-control d-inline-block " value={this.state.regularExpression} onChange={this.onChangeRegularExpression} required />
                     {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
                     <div style={divStyle}>
                         <AvFeedback >לא הוכנס ביטוי רגולרי</AvFeedback>

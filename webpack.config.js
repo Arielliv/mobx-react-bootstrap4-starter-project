@@ -87,14 +87,6 @@ module.exports = {
     ],
   },
   plugins: [
-    // new webpack.SourceMapDevToolPlugin({
-    //     test: [/\.js$/, /\.jsx$/],
-    //     exclude: 'vendor',
-    //     filename: "bundle.js",
-    //     append: "//# sourceMappingURL=[url]",
-    //     moduleFilenameTemplate: '[resource-path]',
-    //     fallbackModuleFilenameTemplate: '[resource-path]',
-    // }),
     new webpack.LoaderOptionsPlugin({
       options: {
         context: sourcePath

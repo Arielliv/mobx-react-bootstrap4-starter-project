@@ -5,20 +5,24 @@ import * as React from 'react';
 import { Log } from '../Log/';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import {ILogModel} from "../../../models/ILogModel";
+
 // import * as style from './style.css';
 
 export interface SpecialLogState {
     startLine: string
     endLine : string
 }
+
 export interface SpecialLogProps {
-    /*empty*/
+    startLine: string
+    endLine : string
 }
 export class SpecialLog extends React.Component<SpecialLogProps,SpecialLogState> {
 
     constructor(props) {
         super(props);
-        this.state = { startLine: "" , endLine : ""};
+        this.state = { startLine: this.props.startLine , endLine : this.props.endLine};
         this.onChangeStartLine = this.onChangeStartLine.bind(this);
         this.onChangeEndLine = this.onChangeEndLine.bind(this);
     }

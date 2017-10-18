@@ -9,14 +9,6 @@ import NavItem from "reactstrap/lib/NavItem";
 import NavLink from "reactstrap/lib/NavLink";
 import * as style from './style.css';
 import {Route, Router, Switch} from "react-router";
-import LogView from "../../ViewLogComponents/LogView/index";
-
-import createBrowserHistory from "history/createBrowserHistory";
-import Form from "../../../containers/BuildLogContainer/Form/index";
-import {inject, observer} from "mobx-react";
-import {STORE_LOG_ARRAY} from "../../../constants/stores";
-import LogArrayStore from "../../../stores/LogArrayStore";
-import {observable} from "mobx";
 import LogsCount from "../LogsCount/index";
 
 export interface NavBarContainerProps {
@@ -66,7 +58,7 @@ export class NavBarContainer extends React.Component<NavBarContainerProps, NavBa
             <div className=" col-12 justify-content-between">
                 <div className="col-9 d-inline-block">
                     {LOG_FILTER_TYPES.map((filter) =>
-                        <NavItem className="d-inline-block  " key={filter} children={this.renderFilterLink(filter)}/>
+                        <NavItem className="d-inline-block " key={filter} children={this.renderFilterLink(filter)}/>
                     )}
                 </div>
                 <LogsCount/>

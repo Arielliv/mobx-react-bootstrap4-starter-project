@@ -22,6 +22,11 @@ export class LogArrayStore {
   get logsCount() {
       return this.logs.length;
   }
+
+
+  getLog(id:string) {
+      return this.logs.filter((log) => log.id === id);
+  }
   @action
   addLog(item: ILogModel): void {
     this.logs.push(item);
@@ -29,13 +34,13 @@ export class LogArrayStore {
 
   @action
   deleteLog(id: string): void {
-    this.logs = this.logs.filter((todo) => todo.id !== id);
+    this.logs = this.logs.filter((log) => log.id !== id);
   }
 
   @action
-  editLog(id: string, data: ILogModel): void {
+  editLog( data: ILogModel): void {
     this.logs = this.logs.map((log) => {
-      if (log.id === id) {
+      if (log.id === data.id) {
         log = data;
       }
       return log;

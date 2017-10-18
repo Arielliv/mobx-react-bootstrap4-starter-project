@@ -6,7 +6,18 @@ import { Log } from '../../BuildLogComponents/Log';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Jumbotron,Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import RegularExpressionView from "../RegularExpressionView/index";
+import {Route, Router, Switch} from "react-router";
 import * as style from './style.css';
+import {
+    LOG_FILTER_COMPONENT_HASH, LOG_FILTER_LOCATION_HASH, LOG_FILTER_TITLES, LOG_FILTER_TYPES,
+    LogFilter
+} from "../../../constants/appRouts";
+import {STORE_LOG, STORE_ROUTER} from "../../../constants/stores";
+import RouterStore from "../../../stores/RouterStore";
+import LogStore from "../../../stores/LogStore";
+import {ILogModel} from "../../../models/ILogModel";
+import {inject} from "mobx-react";
+import {IRegularExpression} from "../../../models/RegularExpression";
 
 // import * as style from './style.css';
 
@@ -14,7 +25,7 @@ export interface LogViewState {
     id:string
     name: string
     path: string
-    regularExpressions: Array<string>
+    regularExpressions: Array<IRegularExpression>
     typeRolling: string
     typeSpecial: string
     startLine: string
@@ -23,7 +34,10 @@ export interface LogViewState {
 export interface LogViewProps {
     log : any
     onRemoveLog() : void
+    onChangeFilter: (filter: LogFilter) => any;
 }
+
+@inject(STORE_LOG)
 export class LogView extends React.Component<LogViewProps,LogViewState> {
 
     constructor(props) {
@@ -38,17 +52,31 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
             endLine:  this.props.log.endLine
         };
         this.onRemoveLog = this.onRemoveLog.bind(this);
+        this.onClickEditLog = this.onClickEditLog.bind(this);
     }
 
     onRemoveLog(){
         this.props.onRemoveLog();
     }
 
+    onClickEditLog(){
+        const { onChangeFilter} = this.props;
+        const logStore = this.props[STORE_LOG] as LogStore;
+        console.log(logStore);
+        logStore.addLog(this.props.log);
+        logStore.setEditFlag(true);
+        onChangeFilter(LogFilter.BUILD);
+    }
 
+    renderFilterLinkOnButton() {
+        return (
+                <Button className="btn-outline-primary m-1 col-4" onClick={this.onClickEditLog}>עריכה</Button>
+        );
+    }
     render() {
         const style1 = style.cardShadow + " pt-3 pb-3";
-        let regularExpressionLoop = this.state.regularExpressions.map(regularExpression => {
-            return <RegularExpressionView key={regularExpression} regularExpression={regularExpression}/>
+        let regularExpressionLoop = this.state.regularExpressions.map(regularExpressionObject => {
+            return <RegularExpressionView key={regularExpressionObject.id} regularExpression={regularExpressionObject.regularExpression}/>
         });
         const typeSpecialCase = (
             <div className="col-12">
@@ -58,10 +86,12 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
                 </div>
             </div>
         );
+        const filter = LOG_FILTER_TYPES[LogFilter.BUILD];
+        const editButton = this.renderFilterLinkOnButton();
         return(
 
             <div className="col-6 d-inline-block">
-                    <div  >
+                    <div>
                         <div className="container pt-4">
                         <Jumbotron className={style1}>
                             <h3 className="">שם הלוג - {this.state.name} </h3>
@@ -96,7 +126,8 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
-                                    <Button className="btn-outline-primary m-1 col-4">עריכה</Button>
+                                    {editButton}
+                                    <Route path={"/"+LOG_FILTER_LOCATION_HASH[filter]} component={LOG_FILTER_COMPONENT_HASH[filter]} key={filter}/>
                                     <Button className="btn-outline-danger m-1 col-4" onClick={this.onRemoveLog}>מחיקה</Button>
                                 </div>
 

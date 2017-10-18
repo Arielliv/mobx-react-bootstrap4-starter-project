@@ -10,12 +10,13 @@ import { ILogModel } from './models/ILogModel';
 import {LogArrayStore} from "./stores/LogArrayStore";
 import {RouterStore} from "./stores/RouterStore";
 import Form from "./containers/BuildLogContainer/Form/index";
-import {STORE_LOG_ARRAY, STORE_ROUTER} from "./constants/stores";
+import {STORE_LOG_ARRAY, STORE_ROUTER, STORE_LOG} from "./constants/stores";
 import {Root} from "./containers/Root/index";
 import SpecialLog from "./components/BuildLogComponents/SpecialLog/index";
 import LogView from "./components/ViewLogComponents/LogView/index";
 import NavBarContainer from "./components/GeneralComponents/NavBarContainer/index";
 import Main, {default as MainRoutes} from "./containers/GeneralContainer/MainRoutes/index";
+import LogStore from "./stores/LogStore";
 
 
 
@@ -32,9 +33,11 @@ const defaultLogs = [
 const history = createBrowserHistory();
 const logArrayStore = new LogArrayStore(defaultLogs);
 const routerStore = new RouterStore(history);
+const log = new LogStore();
 const rootStores = {
     [STORE_LOG_ARRAY]: logArrayStore,
-    [STORE_ROUTER]: routerStore
+    [STORE_ROUTER]: routerStore,
+    [STORE_LOG]: log
 };
 
 

@@ -7,22 +7,33 @@ import {SpecialLog} from "../SpecialLog/index";
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import * as style from './style.css';
+import {ILogModel} from "../../../models/ILogModel";
+import {STORE_LOG} from "../../../constants/stores";
+import LogStore from "../../../stores/LogStore";
+import {inject} from "mobx-react";
 
 // import * as style from './style.css';
 
-export interface BodyProps {
-    /*empty*/
-}
+
 
 export interface BodyState {
     typeRolling: string
     typeSpecial : string
 }
+
+export interface BodyProps {
+    log: ILogModel
+}
+
+@inject(STORE_LOG)
 export class Body extends React.Component<BodyProps,BodyState> {
 
-    constructor(props, context?: any) {
+    constructor(props?:any, context?: any) {
         super(props, context);
-        this.state = { typeRolling: "regular" , typeSpecial : "regular"};
+
+        this.state = { typeRolling: this.props.log.typeRolling , typeSpecial : this.props.log.typeSpecial};
+
+
         this.onChangeLogTypeRolling = this.onChangeLogTypeRolling.bind(this);
         this.onChangeLogTypeSpecial = this.onChangeLogTypeSpecial.bind(this);
     }
@@ -51,11 +62,11 @@ export class Body extends React.Component<BodyProps,BodyState> {
                         <AvRadioGroup className="col-6" name="typeRolling" label="מתגלגל ?" inline  required onChange={this.onChangeLogTypeRolling}>
                             <span className="col-4 ">
                                 <Label  className="col-2">כן</Label>
-                                <AvRadio  value="rolling" />
+                                <AvRadio  value={this.state.typeRolling}/>
                             </span>
                             <span className="col-4 ">
                                 <Label  className="col-2">לא</Label>
-                                <AvRadio  value="regular" />
+                                <AvRadio  value={this.state.typeSpecial} />
                             </span>
                             <div style={divStyle}>
                                 <AvFeedback >לא הוכנס שם לוג</AvFeedback>
@@ -76,8 +87,8 @@ export class Body extends React.Component<BodyProps,BodyState> {
                         </AvRadioGroup>
                     </div>
                 </div>
-                {this.state.typeSpecial == "special" ? <SpecialLog /> : ''}
-                <Log/>
+                {this.state.typeSpecial == "special" ? <SpecialLog endLine={this.props.log.endLine} startLine={this.props.log.startLine} /> : ''}
+                <Log name={this.props.log.name} path={this.props.log.path} regularExpressions={this.props.log.regularExpressions}/>
                 <FormGroup className="row justify-content-center">
                     <Button className="btn-outline-primary col-6">סיום</Button>
                 </FormGroup>

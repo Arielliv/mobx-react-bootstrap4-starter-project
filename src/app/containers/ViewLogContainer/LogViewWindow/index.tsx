@@ -2,25 +2,19 @@
  * Created by ariel7342 on 27/09/2017.
  */
 import * as React from 'react';
-import { Body } from '../../../components/BuildLogComponents/Body';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import * as style from './style.css';
 import {RouteComponentProps} from "react-router";
 import {inject, observer} from "mobx-react";
-import {STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
+import {STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores"
 import {LogArrayStore} from "../../../stores/LogArrayStore";
 import {ILogModel} from "../../../models/ILogModel";
-import {RouterStore} from "../../../stores/RouterStore";
-import Nav, {default as NavBarContainer} from "../../../components/GeneralComponents/NavBarContainer/index";
-import {LOG_FILTER_LOCATION_HASH, LogFilter} from "../../../constants/appRouts";
 import LogView from "../../../components/ViewLogComponents/LogView/index";
-// import {LOG_FILTER_LOCATION_HASH, TodoFilter} from "../../constants/todos";
-
-
-// import * as style from './style.css';
+import {LOG_FILTER_LOCATION_HASH, LogFilter} from "../../../constants/appRouts";
+import RouterStore from "../../../stores/RouterStore";
 
 export interface LogViewWindowProps extends RouteComponentProps<any> {
-    logs: ILogModel[];
+    logs: ILogModel[]
 }
 
 
@@ -28,25 +22,23 @@ export interface LogViewWindowState {
 
 }
 
-@inject(STORE_LOG_ARRAY)
+@inject(STORE_LOG_ARRAY, STORE_ROUTER)
 @observer
 export class LogViewWindow extends React.Component<LogViewWindowProps,LogViewWindowState> {
 
     constructor(props: LogViewWindowProps, context?: any) {
         super(props, context);
+
+        this.handleFilter = this.handleFilter.bind(this);
+        this.onRemoveLog = this.onRemoveLog.bind(this);
     }
 
-    renderToggleAll() {
-        const { logs } = this.props;
-        const completedCount = logs.length;
-        if (logs.length > 0) {
-            return (
-                <input
-                    className={style.toggleAll}
-                    type="checkbox"
-                    checked={completedCount === logs.length}
-                />
-            );
+    handleFilter(filter: LogFilter) {
+        const router = this.props[STORE_ROUTER] as RouterStore;
+        const currentHash = router.location.hash;
+        const nextHash = LOG_FILTER_LOCATION_HASH[filter];
+        if (currentHash !== nextHash) {
+            router.replace(nextHash);
         }
     }
     onRemoveLog(id : string){
@@ -63,9 +55,9 @@ export class LogViewWindow extends React.Component<LogViewWindowProps,LogViewWin
         return(
             <div>
                 <div className={style1}>
-                    {logs.map(log =>
-                        <LogView key={log.id} log={log} onRemoveLog={() => {this.onRemoveLog(log.id)}}/>
-                    )}
+                    {logs.length >0 ? logs.map(log =>
+                        <LogView key={log.id} log={log} onRemoveLog={() => {this.onRemoveLog(log.id)}} onChangeFilter={this.handleFilter.bind(this)}/>
+                    ) : <h2 className="row justify-content-center m-5">אין פריטים</h2>}
                 </div>
             </div>
 
