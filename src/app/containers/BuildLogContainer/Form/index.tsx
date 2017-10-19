@@ -36,6 +36,13 @@ export class Form extends React.Component<FormProps,FormState> {
         this.state = { filter: LogFilter.BUILD ,log : {id:(Math.floor(Math.random() * 100 ) +1).toString(), typeRolling: "regular" , typeSpecial : "regular", name: "" , path : "" ,regularExpressions : [{id:"1",regularExpression:""}],endLine:"",startLine:""}};
 
         this.onSubmitAvForm = this.onSubmitAvForm.bind(this);
+        this.handelChangeName = this.handelChangeName.bind(this);
+        this.handelChangePath = this.handelChangePath.bind(this);
+        this.handelChangeTypeRolling = this.handelChangeTypeRolling.bind(this);
+        this.handelChangeTypeSpecial = this.handelChangeTypeSpecial.bind(this);
+        this.handelChangeRegularExpressions = this.handelChangeRegularExpressions.bind(this);
+        this.handelChangeStartLine = this.handelChangeStartLine.bind(this);
+        this.handelChangeEndLine = this.handelChangeEndLine.bind(this);
     }
 
     componentWillMount(){
@@ -49,41 +56,78 @@ export class Form extends React.Component<FormProps,FormState> {
         }
     }
 
+    handelChangeName(name:string){
+        let log : ILogModel = this.state.log;
+        log.name = name;
+        this.setState({log:log});
+    }
+    handelChangePath(path:string){
+        let log : ILogModel = this.state.log;
+        log.path = path;
+        this.setState({log:log});
+    }
+    handelChangeTypeRolling(typeRolling:string){
+        let log : ILogModel = this.state.log;
+        log.typeRolling = typeRolling;
+        this.setState({log:log});
+    }
+    handelChangeTypeSpecial(typeSpecial:string){
+        let log : ILogModel = this.state.log;
+        log.typeSpecial = typeSpecial;
+        this.setState({log:log});
+    }
+    handelChangeRegularExpressions(regularExpressions:Array<IRegularExpression>){
+        let log : ILogModel = this.state.log;
+        log.regularExpressions = regularExpressions;
+        this.setState({log:log});
+    }
+    handelChangeStartLine(startLine:string){
+        let log : ILogModel = this.state.log;
+        log.startLine = startLine;
+        this.setState({log:log});
+    }
+    handelChangeEndLine(endLine:string){
+        let log : ILogModel = this.state.log;
+        log.endLine = endLine;
+        this.setState({log:log});
+    }
+
     onSubmitAvForm(event, errors, values){
         console.log(values);
-
+        console.log(this.state.log);
         const logStore = this.props[STORE_LOG] as LogStore;
 
         const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
 
         if (errors.length === 0){
-            let name: string = values.name;
-            let path: string = values.path;
-            let typeRolling: string = values.typeRolling;
-            let typeSpecial: string = values.typeSpecial;
-            let startLine: string = values.startLine;
-            let endLine: string = values.endLine;
-            let regularExpressions: Array<IRegularExpression> = [];
-            for (let i = 1; i < 100; i++) {
-                let name = "regularExpression-" + i;
-                if (values[name]) {
-                    regularExpressions.push({id:i.toString(),regularExpression:values[name]});
-                }
-            }
+            // let name: string = values.name;
+            // let path: string = values.path;
+            // let typeRolling: string = values.typeRolling;
+            // let typeSpecial: string = values.typeSpecial;
+            // let startLine: string = values.startLine;
+            // let endLine: string = values.endLine;
+            // let regularExpressions: Array<IRegularExpression> = [];
+            // for (let i = 1; i < 100; i++) {
+            //     let name = "regularExpression-" + i;
+            //     if (values[name]) {
+            //         regularExpressions.push({id:i.toString(),regularExpression:values[name]});
+            //     }
+            // }
 
             const logEditFlag : boolean = logStore.getEditFlag;
 
             if(logEditFlag){
-                let myObject: ILogModel;
-                myObject = {id:this.state.log.id, name:name, path:path, typeRolling:typeRolling, typeSpecial:typeSpecial, startLine:startLine, endLine:endLine, regularExpressions:regularExpressions};
-                logArrayStore.editLog(myObject);
+                // let myObject: ILogModel;
+                // myObject = {id:this.state.log.id, name:name, path:path, typeRolling:typeRolling, typeSpecial:typeSpecial, startLine:startLine, endLine:endLine, regularExpressions:regularExpressions};
+                logArrayStore.editLog(this.state.log);
                 logStore.setEditFlag(false);
             } else {
-                let myObject: ILogModel;
-                myObject = {id:this.state.log.id, name:name,  path:path,typeRolling:typeRolling, typeSpecial:typeSpecial, startLine:startLine, endLine:endLine, regularExpressions:regularExpressions};
-                logArrayStore.addLog(myObject);
+                // let myObject: ILogModel;
+                // myObject = {id:this.state.log.id, name:name,  path:path,typeRolling:typeRolling, typeSpecial:typeSpecial, startLine:startLine, endLine:endLine, regularExpressions:regularExpressions};
+                logArrayStore.addLog(this.state.log);
             }
         } else {
+
             console.log("form invalid in : " + errors);
         }
     }
@@ -97,7 +141,7 @@ export class Form extends React.Component<FormProps,FormState> {
             <div>
                 {/*bind this of the component to inject inside onSubmitAvFormRender function in the render */}
                 <AvForm onSubmit={this.onSubmitAvForm} model={defaultValues} className={style1}>
-                    <Body log={this.state.log} />
+                    <Body log={this.state.log} onChangeName={(name : string) => this.handelChangeName(name)} onChangePath={(path : string) => this.handelChangePath(path)} onChangeTypeRolling={(typeRolling : string) => this.handelChangeTypeRolling(typeRolling)} onChangeTypeSpecial={(typeSpecial : string) => this.handelChangeTypeSpecial(typeSpecial)} onChangeRegularExpressions={(regularExpressions : Array<IRegularExpression>) => this.handelChangeRegularExpressions(regularExpressions)} onChangeStartLine={(startLine : string) => this.handelChangeStartLine(startLine)} onChangeEndLine={(endLine : string) => this.handelChangeEndLine(endLine)}/>
                 </AvForm >
             </div>
 

@@ -24,6 +24,9 @@ export interface LogProps {
     name : string
     path : string
     regularExpressions : Array<IRegularExpression>
+    onChangeRegularExpressions(regularExpression : Array<IRegularExpression>)
+    onChangePath(path : string)
+    onChangeName(name : string)
 }
 @inject(STORE_LOG)
 export class Log extends React.Component<LogProps, LogState> {
@@ -34,7 +37,6 @@ export class Log extends React.Component<LogProps, LogState> {
 
         this.state = { name: this.props.name , path : this.props.name  ,regularExpressions : this.props.regularExpressions};
 
-
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangePath = this.onChangePath.bind(this);
         this.onChangeRegularExpression = this.onChangeRegularExpression.bind(this);
@@ -44,10 +46,12 @@ export class Log extends React.Component<LogProps, LogState> {
 
     onChangeName(e){
         this.setState({name:e.target.value});
+        this.props.onChangeName(this.state.name);
     }
 
     onChangePath(e){
         this.setState({path:e.target.value});
+        this.props.onChangePath(this.state.path);
     }
 
     onChangeRegularExpression(id : string, value : string){
@@ -55,6 +59,7 @@ export class Log extends React.Component<LogProps, LogState> {
         let foundIndex = regularExpArray.findIndex(x => x.id == id);
         regularExpArray[foundIndex].regularExpression = value;
         this.setState({regularExpressions: regularExpArray});
+        this.props.onChangeRegularExpressions(this.state.regularExpressions);
     }
 
     onClickAddRegularExpression(){
@@ -68,7 +73,7 @@ export class Log extends React.Component<LogProps, LogState> {
     }
 
     onRemoveRegularExpression(id : string){
-        console.log('on remove  Log')
+        console.log('on remove  Log');
         const regularExpArrayAfterRemove = this.state.regularExpressions.filter(function(obj) {
             return obj.id !== id;
         });

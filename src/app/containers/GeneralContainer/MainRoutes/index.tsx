@@ -1,5 +1,5 @@
 import {inject} from "mobx-react";
-import {STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
+import {STORE_LOG, STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
 import { RouteComponentProps} from "react-router";
 import {LOG_FILTER_LOCATION_HASH, LogFilter} from "../../../constants/appRouts";
 import * as React from "react";
@@ -8,6 +8,7 @@ import LogArrayStore from "../../../stores/LogArrayStore";
 import * as style from './style.css';
 import RouterStore from "../../../stores/RouterStore";
 import createBrowserHistory from "history/createBrowserHistory";
+import LogStore from "../../../stores/LogStore";
 
 export interface MainRoutesProps extends RouteComponentProps<any> {
     // /** MobX Stores will be injected via @inject() **/
@@ -19,7 +20,7 @@ export interface MainRoutesProps extends RouteComponentProps<any> {
 export interface MainRoutesState {
     filter: LogFilter;
 }
-@inject(STORE_LOG_ARRAY, STORE_ROUTER)
+@inject(STORE_LOG_ARRAY, STORE_ROUTER,STORE_LOG)
 export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState> {
     constructor(props: MainRoutesProps, context?: any) {
         super(props, context);
@@ -52,10 +53,12 @@ export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState>
         if (currentHash !== nextHash) {
             router.replace(nextHash);
         }
+        //reset editLogFlag when page changes
+        const logStore = this.props[STORE_LOG] as LogStore;
+        logStore.setEditFlag(false);
     }
 
     render() {
-        const history = createBrowserHistory();
 
         const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
 

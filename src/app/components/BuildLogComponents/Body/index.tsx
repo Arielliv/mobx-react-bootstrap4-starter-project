@@ -11,6 +11,7 @@ import {ILogModel} from "../../../models/ILogModel";
 import {STORE_LOG} from "../../../constants/stores";
 import LogStore from "../../../stores/LogStore";
 import {inject} from "mobx-react";
+import {IRegularExpression} from "../../../models/RegularExpression";
 
 // import * as style from './style.css';
 
@@ -23,6 +24,13 @@ export interface BodyState {
 
 export interface BodyProps {
     log: ILogModel
+    onChangeStartLine(startLine:string)
+    onChangeEndLine(endLine:string)
+    onChangeRegularExpressions(RegularExpressions:Array<IRegularExpression>)
+    onChangeName(name:string)
+    onChangePath(path:string)
+    onChangeTypeRolling(typeRolling:string)
+    onChangeTypeSpecial(typeSpecial:string)
 }
 
 @inject(STORE_LOG)
@@ -40,9 +48,11 @@ export class Body extends React.Component<BodyProps,BodyState> {
 
     onChangeLogTypeRolling(e){
         this.setState({typeRolling:e.target.value});
+        this.props.onChangeTypeRolling(e.target.value);
     }
     onChangeLogTypeSpecial(e){
         this.setState({typeSpecial:e.target.value});
+        this.props.onChangeTypeSpecial(e.target.value);
     }
 
     render() {
@@ -59,20 +69,20 @@ export class Body extends React.Component<BodyProps,BodyState> {
                 </div>
                 <div className="pt-3">
                     <div className="row" >
-                        <AvRadioGroup className="col-6" name="typeRolling" label="מתגלגל ?" inline  required onChange={this.onChangeLogTypeRolling}>
+                        <AvRadioGroup className="col-6" name="typeRolling" label="מתגלגל ?" inline  required value={this.state.typeRolling} onChange={this.onChangeLogTypeRolling}>
                             <span className="col-4 ">
                                 <Label  className="col-2">כן</Label>
-                                <AvRadio  value={this.state.typeRolling}/>
+                                <AvRadio value="rolling" />
                             </span>
                             <span className="col-4 ">
                                 <Label  className="col-2">לא</Label>
-                                <AvRadio  value={this.state.typeSpecial} />
+                                <AvRadio value="regular" />
                             </span>
                             <div style={divStyle}>
                                 <AvFeedback >לא הוכנס שם לוג</AvFeedback>
                             </div>
                         </AvRadioGroup>
-                        <AvRadioGroup className="col-6" name="typeSpecial" label="שורה מיוחדת ?" inline  required onChange={this.onChangeLogTypeSpecial}>
+                        <AvRadioGroup className="col-6" name="typeSpecial" label="שורה מיוחדת ?" inline  required value={this.state.typeSpecial} onChange={this.onChangeLogTypeSpecial}>
                             <span className="col-4 ">
                                 <Label  className="col-2">כן</Label>
                                 <AvRadio  value="special" />
@@ -87,8 +97,8 @@ export class Body extends React.Component<BodyProps,BodyState> {
                         </AvRadioGroup>
                     </div>
                 </div>
-                {this.state.typeSpecial == "special" ? <SpecialLog endLine={this.props.log.endLine} startLine={this.props.log.startLine} /> : ''}
-                <Log name={this.props.log.name} path={this.props.log.path} regularExpressions={this.props.log.regularExpressions}/>
+                {this.state.typeSpecial == "special" ? <SpecialLog endLine={this.props.log.endLine} startLine={this.props.log.startLine} onChangeStartLine={(startLine:string) => {this.props.onChangeStartLine(startLine)}} onChangeEndLine={(endLine:string) => {this.props.onChangeEndLine(endLine)}} /> : ''}
+                <Log name={this.props.log.name} path={this.props.log.path} regularExpressions={this.props.log.regularExpressions} onChangeRegularExpressions={(regularExpressions:Array<IRegularExpression>) => {this.props.onChangeRegularExpressions(regularExpressions)}} onChangePath={(path:string)=> {this.props.onChangePath(path)}} onChangeName={(name:string)=> {this.props.onChangeName(name)}}/>
                 <FormGroup className="row justify-content-center">
                     <Button className="btn-outline-primary col-6">סיום</Button>
                 </FormGroup>

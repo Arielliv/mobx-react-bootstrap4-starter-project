@@ -81,8 +81,8 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
         const typeSpecialCase = (
             <div className="col-12">
                 <div className="row">
-                    <p className="col-4 lead">תחילת שורה :</p><span className="col-8 mt-1 p-0">{this.state.startLine}</span>
-                    <p className="col-4 lead">סוף שורה :</p><span className="col-8 mt-1 p-0">{this.state.endLine}</span>
+                    <p className="col-5 lead">תחילת שורה :</p><span className="col-7 mt-1 p-0">{this.state.startLine}</span>
+                    <p className="col-5 lead">סוף שורה :</p><span className="col-7 mt-1 p-0">{this.state.endLine}</span>
                 </div>
             </div>
         );

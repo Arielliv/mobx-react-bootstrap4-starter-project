@@ -17,6 +17,8 @@ export interface SpecialLogState {
 export interface SpecialLogProps {
     startLine: string
     endLine : string
+    onChangeStartLine(path : string)
+    onChangeEndLine(endLine : string)
 }
 export class SpecialLog extends React.Component<SpecialLogProps,SpecialLogState> {
 
@@ -29,10 +31,12 @@ export class SpecialLog extends React.Component<SpecialLogProps,SpecialLogState>
 
     onChangeStartLine(e){
         this.setState({startLine:e.target.value});
+        this.props.onChangeStartLine(this.state.startLine);
     }
 
     onChangeEndLine(e){
         this.setState({endLine:e.target.value});
+        this.props.onChangeEndLine(this.state.endLine);
     }
 
     render() {
