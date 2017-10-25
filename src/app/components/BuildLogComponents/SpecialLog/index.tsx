@@ -2,12 +2,8 @@
  * Created by ariel7342 on 27/09/2017.
  */
 import * as React from 'react';
-import { Log } from '../Log/';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import {ILogModel} from "../../../models/ILogModel";
-
-// import * as style from './style.css';
+import { Label} from 'reactstrap';
 
 export interface SpecialLogState {
     startLine: string

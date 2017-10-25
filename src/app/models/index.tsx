@@ -1,4 +1,5 @@
 import {ILogModel} from './ILogModel';
-
-import {IRegularExpression} from './RegularExpression';
-export { ILogModel,IRegularExpression };
+import {IAlertModel} from './IAlertModel';
+import {IRegularExpression} from './IRegularExpressionModel';
+import {IModalModel} from  './IModalModel';
+export { ILogModel,IRegularExpression,IAlertModel,IModalModel };

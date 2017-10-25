@@ -1,4 +1,5 @@
 import {observable, action, computed} from 'mobx';
+import {asyncAction} from "mobx-utils"
 import {  } from '../models';
 import {ILogModel} from "../models/ILogModel";
 
@@ -12,10 +13,10 @@ export class LogArrayStore {
   }
 
   @observable
-  public logs: Array<ILogModel>;
+  private logs: Array<ILogModel>;
 
   @computed
-  get viewLogs() {
+  get getLogs() {
       return this.logs;
   }
   @computed
@@ -23,18 +24,20 @@ export class LogArrayStore {
       return this.logs.length;
   }
 
-
+  @action
   getLog(id:string) {
       return this.logs.filter((log) => log.id === id);
   }
   @action
   addLog(item: ILogModel): void {
     this.logs.push(item);
+    localStorage.setItem( 'defaultLogs', JSON.stringify(this.logs));
   }
 
   @action
   deleteLog(id: string): void {
     this.logs = this.logs.filter((log) => log.id !== id);
+    localStorage.setItem( 'defaultLogs', JSON.stringify(this.logs));
   }
 
   @action
@@ -43,6 +46,7 @@ export class LogArrayStore {
       if (log.id === data.id) {
         log = data;
       }
+      localStorage.setItem( 'defaultLogs', JSON.stringify(this.logs));
       return log;
     })
   }

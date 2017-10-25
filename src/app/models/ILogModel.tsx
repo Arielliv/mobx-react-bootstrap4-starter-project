@@ -1,4 +1,4 @@
-import {IRegularExpression} from "./RegularExpression";
+import {IRegularExpression} from "./IRegularExpressionModel";
 export interface ILogModel {
   id : string
   name : string

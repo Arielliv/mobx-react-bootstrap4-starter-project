@@ -2,18 +2,13 @@
  * Created by ariel7342 on 27/09/2017.
  */
 import * as React from 'react';
-import * as classNames from 'classnames';
-import {IRegularExpression} from '../../../models/RegularExpression';
-import {SpecialLog} from '../SpecialLog/index'
+import {IRegularExpression} from '../../../models/IRegularExpressionModel';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Label } from 'reactstrap';
 import RegularExpression from "../RegularExpression/index";
 import {inject} from "mobx-react";
 import {STORE_LOG} from "../../../constants/stores";
-import LogStore from "../../../stores/LogStore";
-import {ILogModel} from "../../../models/ILogModel";
-
-// import * as style from './style.css';
+import * as MdIconPack from 'react-icons/lib/md';
 
 export interface LogState {
     name : string
@@ -108,7 +103,9 @@ export class Log extends React.Component<LogProps, LogState> {
                 {regularExpressionLoop}
                 <div className="form-row">
                     <div className="col-1 d-inline-block">
-                        <button type="button" className="btn btn-outline-success  col-12 "  onClick={this.onClickAddRegularExpression}>+</button>
+                        <button type="button" className="btn btn-outline-success  col-12 "  onClick={this.onClickAddRegularExpression}>
+                            <MdIconPack.MdAdd/>
+                        </button>
                     </div>
                     <p className="col-11  d-inline-block mt-1">הוסף ביטוי רגולרי...</p>
                 </div>

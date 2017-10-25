@@ -2,9 +2,7 @@
  * Created by ariel7342 on 27/09/2017.
  */
 import * as React from 'react';
-import { Log } from '../../BuildLogComponents/Log';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Jumbotron,Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 // import * as style from './style.css';
 

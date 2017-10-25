@@ -1,5 +1,5 @@
-import {inject} from "mobx-react";
-import {STORE_LOG, STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
+import {inject, observer} from "mobx-react";
+import {STORE_ALERT, STORE_LOG, STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
 import { RouteComponentProps} from "react-router";
 import {LOG_FILTER_LOCATION_HASH, LogFilter} from "../../../constants/appRouts";
 import * as React from "react";
@@ -7,8 +7,18 @@ import NavBarContainer from "../../../components/GeneralComponents/NavBarContain
 import LogArrayStore from "../../../stores/LogArrayStore";
 import * as style from './style.css';
 import RouterStore from "../../../stores/RouterStore";
-import createBrowserHistory from "history/createBrowserHistory";
 import LogStore from "../../../stores/LogStore";
+import AlertContainer from "../../../components/GeneralComponents/AlertContainer/index";
+import {IAlertModel} from "../../../models/IAlertModel";
+import AlertStore from "../../../stores/AlertStore";
+import {createViewModel} from "mobx-utils";
+import {autorun} from "mobx";
+
+export interface MainRoutesState {
+    filter: LogFilter;
+    alert: IAlertModel;
+
+}
 
 export interface MainRoutesProps extends RouteComponentProps<any> {
     // /** MobX Stores will be injected via @inject() **/
@@ -16,17 +26,18 @@ export interface MainRoutesProps extends RouteComponentProps<any> {
     //  [STORE_LOG_ARRAY]: LogArrayStore;
 }
 
-
-export interface MainRoutesState {
-    filter: LogFilter;
-}
-@inject(STORE_LOG_ARRAY, STORE_ROUTER,STORE_LOG)
+@inject(STORE_LOG_ARRAY, STORE_ROUTER,STORE_LOG,STORE_ALERT)
+@observer
 export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState> {
+
     constructor(props: MainRoutesProps, context?: any) {
         super(props, context);
-        this.state = { filter: LogFilter.BUILD };
+        const alertStore = this.props[STORE_ALERT] as AlertStore;
+
+        this.state = { filter: LogFilter.BUILD, alert:alertStore.getAlert};
 
         this.handleFilter = this.handleFilter.bind(this);
+        this.handleAlertChange = this.handleAlertChange.bind(this);
 
     }
 
@@ -46,6 +57,13 @@ export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState>
         this.setState({ filter });
     }
 
+    handleAlertChange(){
+        const alertStore = this.props[STORE_ALERT] as AlertStore;
+        this.setState({alert:alertStore.getAlert});
+
+        console.log("b")
+    }
+
     handleFilter(filter: LogFilter) {
         const router = this.props[STORE_ROUTER] as RouterStore;
         const currentHash = router.location.hash;
@@ -58,19 +76,34 @@ export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState>
         logStore.setEditFlag(false);
     }
 
+    handleOnVisibleChange(){
+        let alert = this.state.alert;
+        alert.alertVisible = false;
+        this.setState({alert:alert});
+    }
+     alertComponent(){
+         const alertStore = this.props[STORE_ALERT] as AlertStore;
+
+         const alert = createViewModel(alertStore.getAlert);
+
+         return (<AlertContainer handleOnVisibleChange={() => this.handleOnVisibleChange()} handleAlertChange={() => this.handleAlertChange()} alertColor={alert.alertColor} alertText={alert.alertText} alertVisible={alert.alertVisible}  />);
+     }
+
+
     render() {
 
         const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
 
-        const { filter } = this.state;
         const nav = (
-            <NavBarContainer filter={filter}
-                             logsCount={logArrayStore.logs.length}
+            <NavBarContainer filter={this.state.filter}
+                             logsCount={logArrayStore.getLogs.length}
                              onChangeFilter={this.handleFilter} />
         ) ;
+
         return(
             <div>
                 <div className="container mt-5">
+                    {autorun(() =>{this.alertComponent()})}
                     <div className={style.bodyBorder}>
                         {nav}
                     </div>

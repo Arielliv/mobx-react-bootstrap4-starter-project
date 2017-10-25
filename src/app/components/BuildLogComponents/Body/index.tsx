@@ -5,17 +5,12 @@ import * as React from 'react';
 import { Log } from '../Log/';
 import {SpecialLog} from "../SpecialLog/index";
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, FormGroup, Label } from 'reactstrap';
 import * as style from './style.css';
 import {ILogModel} from "../../../models/ILogModel";
 import {STORE_LOG} from "../../../constants/stores";
-import LogStore from "../../../stores/LogStore";
 import {inject} from "mobx-react";
-import {IRegularExpression} from "../../../models/RegularExpression";
-
-// import * as style from './style.css';
-
-
+import {IRegularExpression} from "../../../models/IRegularExpressionModel";
 
 export interface BodyState {
     typeRolling: string
@@ -65,7 +60,7 @@ export class Body extends React.Component<BodyProps,BodyState> {
         return(
             <div className="container pb-2">
                 <div className="row justify-content-center">
-                    <h1 className="h1 col-6 text-center">פרוייקט חפיפה</h1>
+                    <h1 className="h1 col-6 mt-3 text-center">פרוייקט חפיפה</h1>
                 </div>
                 <div className="pt-3">
                     <div className="row" >

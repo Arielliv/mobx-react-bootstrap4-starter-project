@@ -8,12 +8,21 @@ import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } 
 import * as style from './style.css';
 import {RouteComponentProps} from "react-router";
 import {inject, observer} from "mobx-react";
-import {STORE_LOG, STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
+import {STORE_ALERT, STORE_LOG, STORE_LOG_ARRAY, STORE_ROUTER} from "../../../constants/stores";
 import {LogArrayStore} from "../../../stores/LogArrayStore";
-import {LOG_FILTER_LOCATION_HASH, LogFilter} from "../../../constants/appRouts";
+import { LogFilter} from "../../../constants/appRouts";
 import LogStore from "../../../stores/LogStore";
-import {IRegularExpression} from "../../../models/RegularExpression";
+import {IRegularExpression} from "../../../models/IRegularExpressionModel";
 import {ILogModel} from "../../../models/ILogModel";
+import AlertStore from "../../../stores/AlertStore";
+import ModalComponent, {default as GenericModal} from "../../../components/GeneralComponents/GenericModal/index";
+import {IModalModel} from "../../../models/IModalModel";
+
+export interface FormState {
+    filter: LogFilter;
+    log ?: ILogModel;
+    modal ?: IModalModel;
+}
 
 export interface FormProps extends RouteComponentProps<any> {
     // /** MobX Stores will be injected via @inject() **/
@@ -22,12 +31,7 @@ export interface FormProps extends RouteComponentProps<any> {
 
 }
 
-export interface FormState {
-    filter: LogFilter;
-    log ?: ILogModel
-}
-
-@inject(STORE_LOG_ARRAY, STORE_ROUTER, STORE_LOG)
+@inject(STORE_LOG_ARRAY, STORE_ROUTER, STORE_LOG , STORE_ALERT)
 @observer
 export class Form extends React.Component<FormProps,FormState> {
 
@@ -50,9 +54,9 @@ export class Form extends React.Component<FormProps,FormState> {
         const logEditFlag : boolean = logStore.getEditFlag;
 
         if(logEditFlag){
-            this.setState({log : logStore.getLog});
+            this.setState({modal:{modalTitle:"",modalText:"",modalVisible:false},log : logStore.getLog});
         } else {
-            this.setState({log : {id:(Math.floor(Math.random() * 100 ) +1).toString(), typeRolling: "regular" , typeSpecial : "regular", name: "" , path : "" ,regularExpressions : [{id:"1",regularExpression:""}],endLine:"",startLine:""}});
+            this.setState({modal:{modalTitle:"",modalText:"",modalVisible:false},log : {id:(Math.floor(Math.random() * 10000000 ) +1).toString(), typeRolling: "regular" , typeSpecial : "regular", name: "" , path : "" ,regularExpressions : [{id:"1",regularExpression:""}],endLine:"",startLine:""}});
         }
     }
 
@@ -96,41 +100,40 @@ export class Form extends React.Component<FormProps,FormState> {
         console.log(values);
         console.log(this.state.log);
         const logStore = this.props[STORE_LOG] as LogStore;
-
         const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
+        const alertStore = this.props[STORE_ALERT] as AlertStore;
 
         if (errors.length === 0){
-            // let name: string = values.name;
-            // let path: string = values.path;
-            // let typeRolling: string = values.typeRolling;
-            // let typeSpecial: string = values.typeSpecial;
-            // let startLine: string = values.startLine;
-            // let endLine: string = values.endLine;
-            // let regularExpressions: Array<IRegularExpression> = [];
-            // for (let i = 1; i < 100; i++) {
-            //     let name = "regularExpression-" + i;
-            //     if (values[name]) {
-            //         regularExpressions.push({id:i.toString(),regularExpression:values[name]});
-            //     }
-            // }
 
             const logEditFlag : boolean = logStore.getEditFlag;
 
             if(logEditFlag){
-                // let myObject: ILogModel;
-                // myObject = {id:this.state.log.id, name:name, path:path, typeRolling:typeRolling, typeSpecial:typeSpecial, startLine:startLine, endLine:endLine, regularExpressions:regularExpressions};
                 logArrayStore.editLog(this.state.log);
                 logStore.setEditFlag(false);
+                this.setState({
+                    modal:{modalText:"success",modalVisible:true, modalTitle:"הלוג עודכן בהצלחה"},
+                    log : {id:(Math.floor(Math.random() * 100 ) +1).toString(), typeRolling: "regular" , typeSpecial : "regular", name: "" , path : "" ,regularExpressions : [{id:"1",regularExpression:""}],endLine:"",startLine:""}
+                });
             } else {
-                // let myObject: ILogModel;
-                // myObject = {id:this.state.log.id, name:name,  path:path,typeRolling:typeRolling, typeSpecial:typeSpecial, startLine:startLine, endLine:endLine, regularExpressions:regularExpressions};
                 logArrayStore.addLog(this.state.log);
+                this.setState({
+                    modal:{modalText:"success",modalVisible:true, modalTitle:"הלוג נוצר בהצלחה"},
+                    log : {id:(Math.floor(Math.random() * 100 ) +1).toString(), typeRolling: "regular" , typeSpecial : "regular", name: "" , path : "" ,regularExpressions : [{id:"1",regularExpression:""}],endLine:"",startLine:""}
+                });
             }
+
+            alertStore.setAlert({alertColor:"success" ,alertText : "הלוג נוצר בהצלחה" ,alertVisible :true });
+            alertStore.setAlertVisible(true);
         } else {
 
+            // alertStore.setAlert({alertColor:"danger" ,alertText : "שגיאה - הלוג לא נוצר" ,alertVisible :true });
+            // alertStore.setAlertVisible(true);
+            // this.setState({modal:{modalText:"success",modalVisible:true, modalTitle:"שגיאה - הלוג לא נוצר"}});
             console.log("form invalid in : " + errors);
+
         }
     }
+
 
     render() {
         const  style1 = style.shadowBorder + " col-12 p-0";
@@ -142,9 +145,9 @@ export class Form extends React.Component<FormProps,FormState> {
                 {/*bind this of the component to inject inside onSubmitAvFormRender function in the render */}
                 <AvForm onSubmit={this.onSubmitAvForm} model={defaultValues} className={style1}>
                     <Body log={this.state.log} onChangeName={(name : string) => this.handelChangeName(name)} onChangePath={(path : string) => this.handelChangePath(path)} onChangeTypeRolling={(typeRolling : string) => this.handelChangeTypeRolling(typeRolling)} onChangeTypeSpecial={(typeSpecial : string) => this.handelChangeTypeSpecial(typeSpecial)} onChangeRegularExpressions={(regularExpressions : Array<IRegularExpression>) => this.handelChangeRegularExpressions(regularExpressions)} onChangeStartLine={(startLine : string) => this.handelChangeStartLine(startLine)} onChangeEndLine={(endLine : string) => this.handelChangeEndLine(endLine)}/>
-                </AvForm >
+                </AvForm>
+                <GenericModal modal={this.state.modal}/>
             </div>
-
         );
     }
 }

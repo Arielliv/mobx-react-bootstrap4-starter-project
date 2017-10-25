@@ -4,12 +4,13 @@ import {inject, observer} from "mobx-react";
 import {STORE_LOG_ARRAY} from "../../../constants/stores";
 import LogArrayStore from "../../../stores/LogArrayStore";
 
-export interface LogsCountProps {
-
-};
 
 export interface LogsCountState {
   /* empty */
+}
+
+export interface LogsCountProps {
+
 }
 
 @inject(STORE_LOG_ARRAY)

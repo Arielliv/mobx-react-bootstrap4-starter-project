@@ -1,24 +1,19 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
-import {
-    LogFilter, LOG_FILTER_TITLES, LOG_FILTER_TYPES, LOG_FILTER_COMPONENT_HASH,
-    LOG_FILTER_LOCATION_HASH
-} from '../../../constants/appRouts';
-import { Nav, FormGroup, Label, Input, FormText } from 'reactstrap';
-import NavItem from "reactstrap/lib/NavItem";
-import NavLink from "reactstrap/lib/NavLink";
+import {LogFilter, LOG_FILTER_TITLES, LOG_FILTER_TYPES, LOG_FILTER_COMPONENT_HASH, LOG_FILTER_LOCATION_HASH} from '../../../constants/appRouts';
+import { Navbar ,Nav, NavItem ,NavLink} from 'reactstrap';
 import * as style from './style.css';
-import {Route, Router, Switch} from "react-router";
+import {Route} from "react-router";
 import LogsCount from "../LogsCount/index";
-
-export interface NavBarContainerProps {
-  filter: LogFilter;
-  logsCount: number;
-  onChangeFilter: (filter: LogFilter) => any;
-};
 
 export interface NavBarContainerState {
   /* empty */
+}
+
+export interface NavBarContainerProps {
+    filter: LogFilter;
+    logsCount: number;
+    onChangeFilter: (filter: LogFilter) => any;
 }
 
 export class NavBarContainer extends React.Component<NavBarContainerProps, NavBarContainerState> {
@@ -48,14 +43,14 @@ export class NavBarContainer extends React.Component<NavBarContainerProps, NavBa
 
   render() {
 
-      const style1 = style.normal + "pb-5";
+      const style1 = style.normal + " navbar-dark bg-dark";
       const routs = (LOG_FILTER_TYPES.map((filter) =>
           <Route path={"/"+LOG_FILTER_LOCATION_HASH[filter]} component={LOG_FILTER_COMPONENT_HASH[filter]} key={filter}/>
       ));
     return (
         <div className="">
-          <Nav className={style.normal}>
-            <div className=" col-12 justify-content-between">
+          <Navbar  className={style1}>
+            <div className=" col-12 justify-content-between  ">
                 <div className="col-9 d-inline-block">
                     {LOG_FILTER_TYPES.map((filter) =>
                         <NavItem className="d-inline-block " key={filter} children={this.renderFilterLink(filter)}/>
@@ -63,7 +58,7 @@ export class NavBarContainer extends React.Component<NavBarContainerProps, NavBa
                 </div>
                 <LogsCount/>
             </div>
-          </Nav>
+          </Navbar >
             {routs}
 
         </div>

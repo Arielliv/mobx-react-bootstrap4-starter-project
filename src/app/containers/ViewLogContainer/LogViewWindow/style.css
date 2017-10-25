@@ -1,8 +1,8 @@
 
 
 .shadowBorder{
-    min-height: 540px;
-    max-height: 540px;
+    min-height: 560px;
+    max-height: 560px;
     background-color: white;
     overflow-y:auto;
     overflow-x: hidden;

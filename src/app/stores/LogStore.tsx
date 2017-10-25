@@ -7,15 +7,13 @@ export class LogStore {
         this.flag = false;
         this.addLog = this.addLog.bind(this);
         this.setEditFlag = this.setEditFlag.bind(this);
-
-
     }
 
     @observable
-    public log: ILogModel;
+    private log: ILogModel;
 
     @observable
-    public flag: boolean;
+    private flag: boolean;
 
     @computed
     get getEditFlag() {

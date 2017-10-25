@@ -2,22 +2,17 @@
  * Created by ariel7342 on 27/09/2017.
  */
 import * as React from 'react';
-import { Log } from '../../BuildLogComponents/Log';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Jumbotron,Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Jumbotron,Button } from 'reactstrap';
 import RegularExpressionView from "../RegularExpressionView/index";
-import {Route, Router, Switch} from "react-router";
+import {Route} from "react-router";
 import * as style from './style.css';
-import {
-    LOG_FILTER_COMPONENT_HASH, LOG_FILTER_LOCATION_HASH, LOG_FILTER_TITLES, LOG_FILTER_TYPES,
-    LogFilter
-} from "../../../constants/appRouts";
-import {STORE_LOG, STORE_ROUTER} from "../../../constants/stores";
-import RouterStore from "../../../stores/RouterStore";
+import {LOG_FILTER_COMPONENT_HASH, LOG_FILTER_LOCATION_HASH, LOG_FILTER_TYPES, LogFilter } from "../../../constants/appRouts";
+import {STORE_LOG} from "../../../constants/stores";
 import LogStore from "../../../stores/LogStore";
-import {ILogModel} from "../../../models/ILogModel";
 import {inject} from "mobx-react";
-import {IRegularExpression} from "../../../models/RegularExpression";
+import {IRegularExpression} from "../../../models/IRegularExpressionModel";
+import * as MdIconPack from 'react-icons/lib/md';
 
 // import * as style from './style.css';
 
@@ -70,7 +65,9 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
 
     renderFilterLinkOnButton() {
         return (
-                <Button className="btn-outline-primary m-1 col-4" onClick={this.onClickEditLog}>עריכה</Button>
+                <Button className="btn-outline-primary m-1 col-2" onClick={this.onClickEditLog}>
+                    <MdIconPack.MdEdit/>
+                </Button>
         );
     }
     render() {
@@ -128,9 +125,10 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
                                 <div className="row justify-content-center">
                                     {editButton}
                                     <Route path={"/"+LOG_FILTER_LOCATION_HASH[filter]} component={LOG_FILTER_COMPONENT_HASH[filter]} key={filter}/>
-                                    <Button className="btn-outline-danger m-1 col-4" onClick={this.onRemoveLog}>מחיקה</Button>
+                                    <Button className="btn-outline-danger m-1 col-2" onClick={this.onRemoveLog}>
+                                        <MdIconPack.MdDelete/>
+                                    </Button>
                                 </div>
-
                         </Jumbotron>
                     </div>
                 </div>

@@ -3,10 +3,9 @@
  */
 import * as React from 'react';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import {IRegularExpression} from "../../../models/RegularExpression";
-
-// import * as style from './style.css';
+import { Label } from 'reactstrap';
+import {IRegularExpression} from "../../../models/IRegularExpressionModel";
+import * as MdIconPack from 'react-icons/lib/md';
 
 export interface RegularExpressionState {
     regularExpression : string
@@ -46,7 +45,9 @@ export class RegularExpression extends React.Component<RegularExpressionProps, R
                 <AvGroup className="form-row">
                     <Label for="regularExpression" className="col-12 ">ביטוי רגולרי</Label>
                     <div className="col-1 d-inline-block">
-                        <button type="button" className="btn btn-outline-danger  col-12 " onClick={this.onClickRemoveRegularExpression}>X</button>
+                        <button type="button" className="btn btn-outline-danger  col-12 " onClick={this.onClickRemoveRegularExpression}>
+                            <MdIconPack.MdRemove/>
+                        </button>
                     </div>
                     <AvInput type="text" name={this.state.name}  placeholder="הכנס טקסט" className="col-11  form-control d-inline-block " value={this.state.regularExpression} onChange={this.onChangeRegularExpression} required />
                     {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
