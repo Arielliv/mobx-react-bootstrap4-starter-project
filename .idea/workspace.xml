@@ -2,7 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a13f186-f5f8-431b-b021-6c5ceb5b74e3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-grid.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-grid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-grid.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-reboot.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-reboot.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-reboot.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap-reboot.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/css/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.bundle.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.bundle.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/app.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/routes/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tsconfig.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/client/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/BuildLogComponents/Body/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Body/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/BuildLogComponents/Body/style.css" afterPath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Body/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/BuildLogComponents/Log/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/BuildLogComponents/RegularExpression/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/RegularExpression/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/BuildLogComponents/SpecialLog/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/SpecialLog/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/AlertContainer/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/AlertContainer/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/GenericModal/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/GenericModal/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/GenericModal/style.css" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/GenericModal/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/LogsCount/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/LogsCount/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/LogsCount/style.css" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/LogsCount/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/NavBarContainer/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/NavBarContainer/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/GeneralComponents/NavBarContainer/style.css" afterPath="$PROJECT_DIR$/client/src/app/components/GeneralComponents/NavBarContainer/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/ViewLogComponents/LogView/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/ViewLogComponents/LogView/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/ViewLogComponents/LogView/style.css" afterPath="$PROJECT_DIR$/client/src/app/components/ViewLogComponents/LogView/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/ViewLogComponents/RegularExpressionView/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/ViewLogComponents/RegularExpressionView/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/constants/appRouts.ts" afterPath="$PROJECT_DIR$/client/src/app/constants/appRouts.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/constants/stores.ts" afterPath="$PROJECT_DIR$/client/src/app/constants/stores.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/BuildLogContainer/Form/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/containers/BuildLogContainer/Form/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/BuildLogContainer/Form/style.css" afterPath="$PROJECT_DIR$/client/src/app/containers/BuildLogContainer/Form/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/GeneralContainer/MainRoutes/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/containers/GeneralContainer/MainRoutes/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/GeneralContainer/MainRoutes/style.css" afterPath="$PROJECT_DIR$/client/src/app/containers/GeneralContainer/MainRoutes/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/Root/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/containers/Root/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/ViewLogContainer/LogViewWindow/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/containers/ViewLogContainer/LogViewWindow/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/containers/ViewLogContainer/LogViewWindow/style.css" afterPath="$PROJECT_DIR$/client/src/app/containers/ViewLogContainer/LogViewWindow/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/models/IAlertModel.tsx" afterPath="$PROJECT_DIR$/client/src/app/models/IAlertModel.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/models/ILogModel.tsx" afterPath="$PROJECT_DIR$/client/src/app/models/ILogModel.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/models/IModalModel.tsx" afterPath="$PROJECT_DIR$/client/src/app/models/IModalModel.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/models/IRegularExpressionModel.tsx" afterPath="$PROJECT_DIR$/client/src/app/models/IRegularExpressionModel.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/models/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/models/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/stores/AlertStore.tsx" afterPath="$PROJECT_DIR$/client/src/app/stores/AlertStore.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/stores/LogArrayStore.tsx" afterPath="$PROJECT_DIR$/client/src/app/stores/LogArrayStore.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/stores/LogStore.tsx" afterPath="$PROJECT_DIR$/client/src/app/stores/LogStore.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/stores/RouterStore.ts" afterPath="$PROJECT_DIR$/client/src/app/stores/RouterStore.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/stores/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/stores/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/index.html" afterPath="$PROJECT_DIR$/client/src/assets/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/style.css" afterPath="$PROJECT_DIR$/client/src/assets/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/index.tsx" afterPath="$PROJECT_DIR$/client/src/index.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/client/tsconfig.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/types/global.d.ts" afterPath="$PROJECT_DIR$/client/types/global.d.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/client/webpack.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,64 +83,98 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="2000">
+              <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assets/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="40">
+              <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
               <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="75" column="41" lean-forward="false" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/assets/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state relative-caret-position="0">
+              <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="280">
-                <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/components/ViewLogComponents/LogView/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="128" column="62" lean-forward="false" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="62" />
+              <folding>
+                <element signature="e#47#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="e#16#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,9 +184,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -103,6 +204,10 @@
       <find>filter</find>
       <find>alertColor</find>
       <find>typescript-react-mobx-boilerplate</find>
+      <find>ejs</find>
+      <find>outPath</find>
+      <find>bundle</find>
+      <find>path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,13 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/components/Nav/index.tsx" />
-        <option value="$PROJECT_DIR$/src/app/components/NavBar/index.tsx" />
-        <option value="$PROJECT_DIR$/src/app/components/NavBarContainer/style.css" />
-        <option value="$PROJECT_DIR$/src/app/containers/Form/index.tsx" />
-        <option value="$PROJECT_DIR$/src/app/containers/Main/index.tsx" />
-        <option value="$PROJECT_DIR$/src/app/containers/MainRoutes/index.tsx" />
-        <option value="$PROJECT_DIR$/src/app/components/NavBarContainer/index.tsx" />
         <option value="$PROJECT_DIR$/src/app/containers/ViewLogContainer/index.tsx" />
         <option value="$PROJECT_DIR$/src/app/components/BuildLogComponents/Body/style.css" />
         <option value="$PROJECT_DIR$/src/app/containers/GeneralContainer/MainRoutes/style.css" />
@@ -170,8 +268,15 @@
         <option value="$PROJECT_DIR$/src/app/containers/GeneralContainer/MainRoutes/index.tsx" />
         <option value="$PROJECT_DIR$/src/app/stores/LogArrayStore.tsx" />
         <option value="$PROJECT_DIR$/src/app/index.tsx" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/assets/index.html" />
+        <option value="$PROJECT_DIR$/server/index.ts" />
+        <option value="$PROJECT_DIR$/server/tsconfig.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/client/webpack.config.js" />
+        <option value="$PROJECT_DIR$/server/app.ts" />
+        <option value="$PROJECT_DIR$/server/routes/index.ts" />
+        <option value="$PROJECT_DIR$/client/src/assets/index.html" />
+        <option value="$PROJECT_DIR$/client/dist/index.html" />
       </list>
     </option>
   </component>
@@ -185,7 +290,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
+    <option name="x" value="-16" />
+    <option name="y" value="-16" />
     <option name="width" value="1936" />
     <option name="height" value="994" />
   </component>
@@ -224,6 +330,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,33 +342,43 @@
             <path>
               <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bootstrap-4-nwb" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -271,19 +389,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\react-mobx-typescript-project\src\app\models" />
-      <recent name="C:\dev\react-mobx-typescript-project\src\app\components\GeneralComponents\LogsCount" />
-      <recent name="C:\dev\react-mobx-typescript-project\src\app\containers\ViewLogContainer" />
-      <recent name="C:\dev\react-mobx-typescript-project\src\app\containers\Main" />
-      <recent name="C:\dev\react-mobx-typescript-project\src\app\constants" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\react-mobx-typescript-project\client" />
       <recent name="C:\dev\react-mobx-typescript-project\src\app\containers\ViewLogContainer\LogView" />
       <recent name="C:\dev\react-mobx-typescript-project\src\app\containers\GeneralContainer" />
       <recent name="C:\dev\react-mobx-typescript-project\src\app\containers\BuildLogContainer" />
       <recent name="C:\dev\react-mobx-typescript-project\src\app\components\GeneralComponents" />
-      <recent name="C:\dev\react-mobx-typescript-project\src\app\components\ViewLogComponents" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\react-mobx-typescript-project\client\dist" />
+      <recent name="C:\dev\react-mobx-typescript-project\client\src\assets" />
+      <recent name="C:\dev\react-mobx-typescript-project\server" />
+      <recent name="C:\dev\react-mobx-typescript-project\src\app\models" />
+      <recent name="C:\dev\react-mobx-typescript-project\src\app\components\GeneralComponents\LogsCount" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -711,7 +829,8 @@
       <workItem from="1508704405079" duration="20538000" />
       <workItem from="1509285620175" duration="2423000" />
       <workItem from="1509312957315" duration="143000" />
-      <workItem from="1509313287478" duration="215000" />
+      <workItem from="1509313287478" duration="12093000" />
+      <workItem from="1509372113093" duration="4517000" />
     </task>
     <task id="LOCAL-00001" summary="the holidays">
       <created>1507995721521</created>
@@ -748,22 +867,31 @@
       <option name="project" value="LOCAL" />
       <updated>1509313441711</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="6 - align right - after npm fix">
+      <created>1509313506903</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1509313506903</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194267000" />
+    <option name="totallyTimeSpent" value="210662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17915568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294249" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1939314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17870723" sideWeight="0.50104165" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.54606366" sideWeight="0.49895832" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16080402" sideWeight="0.49895832" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -776,7 +904,6 @@
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294249" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -813,155 +940,91 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/reactstrap/lib/Form.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/BuildLogComponents/Body/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/ViewLogComponents/LogView/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/IRegularExpressionModel.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/ISpecialLogModelModel.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/stores/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/IRegularExpressionModel.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/BuildLogComponents/SpecialLog/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/ViewLogComponents/RegularExpressionView/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/NavBarContainer/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/NavBarContainer/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/NavBarContainer/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/NavBarContainer/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="45" column="49" lean-forward="false" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/stores/RouterStore.ts">
+    <entry file="file://$PROJECT_DIR$/client/src/app/stores/RouterStore.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/GeneralContainer/MainRoutes/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/GeneralContainer/MainRoutes/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/history/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/AlertContainer/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/AlertContainer/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/IModalModel.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/IModalModel.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/ViewLogContainer/LogViewWindow/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/ViewLogContainer/LogViewWindow/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="70" column="26" lean-forward="false" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/LogsCount/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/LogsCount/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/GenericModal/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/GenericModal/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/LogsCount/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/LogsCount/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/GeneralComponents/GenericModal/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/GeneralComponents/GenericModal/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/ViewLogContainer/LogViewWindow/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/ViewLogContainer/LogViewWindow/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="13" />
@@ -969,42 +1032,35 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/material-design-icons/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/assets/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/assets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/types/global.d.ts">
+    <entry file="file://$PROJECT_DIR$/client/types/global.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/BuildLogContainer/Form/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/BuildLogContainer/Form/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/BuildLogComponents/Log/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/BuildLogComponents/RegularExpression/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/RegularExpression/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="49" />
@@ -1018,98 +1074,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/BuildLogComponents/Body/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Body/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1080">
           <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/BuildLogContainer/Form/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/BuildLogContainer/Form/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3280">
           <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/stores/LogStore.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/stores/LogStore.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/stores/AlertStore.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/stores/AlertStore.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/GeneralContainer/MainRoutes/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/GeneralContainer/MainRoutes/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/IAlertModel.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/IAlertModel.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/ILogModel.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/ILogModel.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/constants/appRouts.ts">
+    <entry file="file://$PROJECT_DIR$/client/src/app/constants/appRouts.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/constants/stores.ts">
+    <entry file="file://$PROJECT_DIR$/client/src/app/constants/stores.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/Root/index.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/Root/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/ViewLogComponents/LogView/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/stores/LogArrayStore.tsx">
+    <entry file="file://$PROJECT_DIR$/client/src/app/stores/LogArrayStore.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/client/README.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
@@ -1119,17 +1161,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="280">
             <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,33 +1171,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#15#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#16#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/assets/bootstrap-4.0.0-beta.2/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/dist/bootstrap-4.0.0-beta.2/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/ViewLogComponents/LogView/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="128" column="62" lean-forward="false" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="62" />
+          <folding>
+            <element signature="e#47#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/history/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react-router/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="2000">
+          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+    <entry file="file://$PROJECT_DIR$/client/src/assets/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="75" column="41" lean-forward="false" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
