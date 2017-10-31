@@ -40,7 +40,14 @@ class GenericModal extends React.Component<GenericModalProps, GenericModalState>
             <div>
                 <Modal isOpen={this.state.modal.modalVisible} toggle={this.toggle} className="container">
                     <div className="container">
-                        <ModalHeader className={style.rtl} toggle={this.toggle}>{this.state.modal.modalTitle}</ModalHeader>
+                        <div className="modal-header row justify-content-between">
+
+                                <button type="button" className="close col-2 m-0 p-0" data-dismiss="modal" aria-label="Close" onClick={this.toggle}>
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 className="modal-title col-7">{this.state.modal.modalTitle}</h4>
+
+                        </div>
                         <ModalBody className="row justify-content-center">
                             {this.state.modal.modalText}
                         </ModalBody>

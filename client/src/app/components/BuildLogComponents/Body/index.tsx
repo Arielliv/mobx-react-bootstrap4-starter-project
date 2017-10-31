@@ -65,27 +65,35 @@ export class Body extends React.Component<BodyProps,BodyState> {
                 <div className="pt-3">
                     <div className="row" >
                         <AvRadioGroup className="col-6" name="typeRolling" label="מתגלגל ?" inline  required value={this.state.typeRolling} onChange={this.onChangeLogTypeRolling}>
-                            <span className="col-4 ">
-                                <Label  className="col-2">כן</Label>
-                                <AvRadio value="rolling" />
-                            </span>
-                            <span className="col-4 ">
-                                <Label  className="col-2">לא</Label>
-                                <AvRadio value="regular" />
-                            </span>
+                            <div className="col-2 d-inline-block">
+                                <div className="row d-inline-block">
+                                    <Label  className=" d-inline-block ">כן</Label>
+                                    <AvRadio value="rolling" className="d-inline-block align-self-start m-0"/>
+                                </div>
+                            </div>
+                            <div className="col-2 d-inline-block">
+                                <div className="row d-inline-block">
+                                    <Label  className=" d-inline-block ">לא</Label>
+                                    <AvRadio value="regular" className="d-inline-block align-self-start m-0"/>
+                                </div>
+                            </div>
                             <div style={divStyle}>
                                 <AvFeedback >לא הוכנס שם לוג</AvFeedback>
                             </div>
                         </AvRadioGroup>
                         <AvRadioGroup className="col-6" name="typeSpecial" label="שורה מיוחדת ?" inline  required value={this.state.typeSpecial} onChange={this.onChangeLogTypeSpecial}>
-                            <span className="col-4 ">
-                                <Label  className="col-2">כן</Label>
-                                <AvRadio  value="special" />
-                            </span>
-                            <span className="col-4 ">
-                                <Label  className="col-2" >לא</Label>
-                                <AvRadio  value="regular" />
-                            </span>
+                            <div className="col-2 d-inline-block">
+                                <div className="row d-inline-block">
+                                    <Label  className=" d-inline-block ">כן</Label>
+                                    <AvRadio value="special" className="d-inline-block align-self-start m-0"/>
+                                </div>
+                            </div>
+                            <div className="col-2 d-inline-block">
+                                <div className="row d-inline-block">
+                                    <Label  className=" d-inline-block ">לא</Label>
+                                    <AvRadio value="regular" className="d-inline-block align-self-start m-0"/>
+                                </div>
+                            </div>
                             <div style={divStyle}>
                                 <AvFeedback >לא הוכנס שם לוג</AvFeedback>
                             </div>

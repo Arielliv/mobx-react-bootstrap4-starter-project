@@ -1,3 +1,4 @@
+import './bootstrap.scss'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
@@ -11,8 +12,6 @@ import {Root} from "./containers/Root/index";
 import {default as MainRoutes} from "./containers/GeneralContainer/MainRoutes/index";
 import LogStore from "./stores/LogStore";
 import AlertStore from "./stores/AlertStore";
-
-
 
 
 // enable MobX strict mode

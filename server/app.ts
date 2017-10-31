@@ -7,9 +7,10 @@ import * as routes from './routes/index';
 
 const app = express();
 
-app.use(express.static('client/dist'));
+//set public
+app.use(express.static('../public'));
+
 app.use('/', routes);
-app.use('/dist/*', routes);
-app.use('/node_modules/*', routes);
+app.use('/public/*', routes);
 
 export = app;
