@@ -96,7 +96,6 @@ export class MainRoutes extends React.Component<MainRoutesProps,MainRoutesState>
 
         const nav = (
             <NavBarContainer filter={this.state.filter}
-                             logsCount={logArrayStore.getLogs.length}
                              onChangeFilter={this.handleFilter} />
         ) ;
 

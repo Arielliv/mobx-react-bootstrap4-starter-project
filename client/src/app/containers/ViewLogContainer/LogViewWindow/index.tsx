@@ -18,6 +18,7 @@ import {IModalModel} from "../../../models/IModalModel";
 
 export interface LogViewWindowState {
     modal ?: IModalModel;
+    logs : ILogModel[];
 }
 
 export interface LogViewWindowProps extends RouteComponentProps<any> {
@@ -31,10 +32,22 @@ export class LogViewWindow extends React.Component<LogViewWindowProps,LogViewWin
     constructor(props: LogViewWindowProps, context?: any) {
         super(props, context);
 
-        this.state = ({modal:{modalTitle:"",modalText:"",modalVisible:false}});
+        this.state = ({modal:{modalTitle:"",modalText:"",modalVisible:false},logs:[]});
 
         this.handleFilter = this.handleFilter.bind(this);
         this.onRemoveLog = this.onRemoveLog.bind(this);
+    }
+    componentDidMount(){
+        const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
+        logArrayStore.getLogs
+            .then((response) => {
+                console.log(response);
+                this.setState({logs:response.logs});
+
+            })
+            .catch( (error) => {
+                console.log(error);
+            });
     }
 
     handleFilter(filter: LogFilter) {
@@ -48,8 +61,17 @@ export class LogViewWindow extends React.Component<LogViewWindowProps,LogViewWin
     onRemoveLog(id : string){
         const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
         const alertStore = this.props[STORE_ALERT] as AlertStore;
-
         logArrayStore.deleteLog(id);
+        logArrayStore.getLogs
+            .then((response) => {
+                console.log(response);
+                this.setState({logs:response.logs});
+
+            })
+            .catch( (error) => {
+                console.log(error);
+            });
+
         this.setState({modal:{modalText:"success",modalVisible:true, modalTitle:"הלוג נמחק בהצלחה"}});
         alertStore.setAlert({alertColor:"success" ,alertText : "הלוג נמחק בהצלחה" ,alertVisible :true });
         alertStore.setAlertVisible(true);
@@ -57,14 +79,13 @@ export class LogViewWindow extends React.Component<LogViewWindowProps,LogViewWin
 
     render() {
         const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
-        const logs = logArrayStore.getLogs;
-        const style1 = style.shadowBorder + " col-12 p-0";
+        const style1 = style.shadowBorder + " row p-0";
 
 
         return(
-            <div>
+            <div className="col-12">
                 <div className={style1}>
-                    {logs.length >0 ? logs.map(log =>
+                    {this.state.logs.length >0 ? this.state.logs.map(log =>
                         <LogView key={log.id} log={log} onRemoveLog={() => {this.onRemoveLog(log.id)}} onChangeFilter={this.handleFilter.bind(this)}/>
                     ) : <h2 className="row justify-content-center m-5">אין פריטים</h2>}
                 </div>

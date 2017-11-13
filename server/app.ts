@@ -1,16 +1,47 @@
-'use strict';
-
+import * as path from 'path';
 import * as express from 'express';
-import * as  bodyParser from 'body-parser';
-import * as  session from 'express-session';
+import * as logger from 'morgan';
+import * as bodyParser from 'body-parser';
 import * as routes from './routes/index';
+import {LogRouter, logRoutes} from "./routes/LogRouter";
 
-const app = express();
+// Creates and configures an ExpressJS web server.
+class App {
 
-//set public
-app.use(express.static('../public'));
+    // ref to Express instance
+    public app: express.Application;
 
-app.use('/', routes);
-app.use('/public/*', routes);
+    //Run configuration methods on the Express instance.
+    constructor() {
+        this.app = express();
+        this.middleware();
+        this.routes();
+    }
 
-export = app;
+    // Configure Express middleware.
+    private middleware(): void {
+        this.app.use(logger('dev'));
+        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.urlencoded({ extended: false }));
+    }
+
+    // Configure API endpoints.
+    private routes(): void {
+        //set public
+        this.app.use(express.static('../public'));
+
+        let router = express.Router();
+
+        this.app.use('/', router);
+        this.app.use('/api/logs', logRoutes.router);
+
+        // redirect if nothing else sent a response
+        this.app.use(redirectUnmatched);
+        function redirectUnmatched(req, res) {
+            res.redirect("/");
+        }
+    }
+
+}
+
+export default new App().app;

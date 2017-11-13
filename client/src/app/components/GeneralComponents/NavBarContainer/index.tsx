@@ -12,7 +12,6 @@ export interface NavBarContainerState {
 
 export interface NavBarContainerProps {
     filter: LogFilter;
-    logsCount: number;
     onChangeFilter: (filter: LogFilter) => any;
 }
 
@@ -60,7 +59,6 @@ export class NavBarContainer extends React.Component<NavBarContainerProps, NavBa
             </div>
           </Navbar >
             {routs}
-
         </div>
     );
   }

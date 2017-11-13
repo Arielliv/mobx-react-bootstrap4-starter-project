@@ -71,7 +71,7 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
         );
     }
     render() {
-        const style1 = style.cardShadow + " pt-3 pb-3";
+        const style1 = style.cardShadow + " mt-1 mb-1 pt-3 pb-3";
         let regularExpressionLoop = this.state.regularExpressions.map(regularExpressionObject => {
             return <RegularExpressionView key={regularExpressionObject.id} regularExpression={regularExpressionObject.regularExpression}/>
         });
@@ -88,8 +88,8 @@ export class LogView extends React.Component<LogViewProps,LogViewState> {
         return(
 
             <div className="col-6 d-inline-block">
-                    <div>
-                        <div className="container pt-4">
+                    <div className="sticky-top">
+                        <div className="container pt-4 ">
                         <Jumbotron className={style1}>
                             <h3 className="">שם הלוג - {this.state.name} </h3>
                                 <div className="row align-self-end">

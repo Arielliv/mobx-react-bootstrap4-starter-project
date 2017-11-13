@@ -12,38 +12,48 @@ import {Root} from "./containers/Root/index";
 import {default as MainRoutes} from "./containers/GeneralContainer/MainRoutes/index";
 import LogStore from "./stores/LogStore";
 import AlertStore from "./stores/AlertStore";
-
+import axios from 'axios';
+import {ILogModel} from "./models/ILogModel";
 
 // enable MobX strict mode
 useStrict(true);
 
 // default fixtures for TodoStore
-const defaultLogs =  JSON.parse(localStorage.getItem('defaultLogs')) ? JSON.parse(localStorage.getItem('defaultLogs')) : [];
+// let defaultLogs = JSON.parse(localStorage.getItem('defaultLogs')) ? JSON.parse(localStorage.getItem('defaultLogs')) : [];
+let defaultLogs : ILogModel[];
+axios.get('api/logs')
+    .then((response)=> {
 
+        defaultLogs = response.data.logs;
+        // prepare MobX stores
 // prepare MobX stores
-// prepare MobX stores
-const history = createBrowserHistory();
-const logArrayStore = new LogArrayStore(defaultLogs);
-const routerStore = new RouterStore(history);
-const logStore = new LogStore();
-const alertStore = new AlertStore();
-const rootStores = {
-    [STORE_LOG_ARRAY]: logArrayStore,
-    [STORE_ROUTER]: routerStore,
-    [STORE_LOG]: logStore,
-    [STORE_ALERT]: alertStore
-};
+        const history = createBrowserHistory();
+        const logArrayStore = new LogArrayStore(defaultLogs);
+        const routerStore = new RouterStore(history);
+        const logStore = new LogStore();
+        const alertStore = new AlertStore();
+        const rootStores = {
+            [STORE_LOG_ARRAY]: logArrayStore,
+            [STORE_ROUTER]: routerStore,
+            [STORE_LOG]: logStore,
+            [STORE_ALERT]: alertStore
+        };
 
 // render react DOM
-ReactDOM.render(
-    <Provider {...rootStores}>
-        <Root>
-            <Router history={history} >
-                <Switch>
-                    <Route  path="/" component={MainRoutes} />
-                </Switch>
-            </Router>
-        </Root>
-    </Provider>,
-  document.getElementById('root')
-);
+        ReactDOM.render(
+            <Provider {...rootStores}>
+                <Root>
+                    <Router history={history} >
+                        <Switch>
+                            <Route  path="/" component={MainRoutes} />
+                        </Switch>
+                    </Router>
+                </Root>
+            </Provider>,
+            document.getElementById('root')
+        );
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+

@@ -6,11 +6,10 @@ import LogArrayStore from "../../../stores/LogArrayStore";
 
 
 export interface LogsCountState {
-  /* empty */
+    logsCount: number
 }
 
 export interface LogsCountProps {
-
 }
 
 @inject(STORE_LOG_ARRAY)
@@ -19,30 +18,34 @@ export class LogsCount extends React.Component<LogsCountProps, LogsCountState> {
 
   constructor(props, context?: any) {
       super(props, context);
-      this.state = {};
+      this.state = {logsCount:0};
 
   }
 
-  renderLogsCount() {
-    const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
-
-    const logsCount = logArrayStore.logsCount;
-    const itemWord = logsCount === 1 ? 'פריט' : 'פריטים';
-
-    return (
-      <span className={style.count}>
-        <strong>{logsCount || 'אין'}</strong> {itemWord}
-      </span>
-    );
-  }
+    // componentDidMount(){
+    //     const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
+    //     logArrayStore.logsCount
+    //         .then((response) => {
+    //             console.log(response);
+    //             this.setState({logsCount:response.data.count});
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // }
 
   render() {
+        const logArrayStore = this.props[STORE_LOG_ARRAY] as LogArrayStore;
+        const logsCount = logArrayStore.logsCount;
+        const itemWord = logsCount === 1 ? 'פריט' : 'פריטים';
 
-    return (
-        <div className="col-3 d-inline-block text-left">
-            {this.renderLogsCount()}
-        </div>
-    );
+        return (
+            <div className="col-3 d-inline-block text-left">
+                <span className={style.count}>
+                    <strong>{logsCount || 'אין'}</strong> {itemWord}
+                </span>
+            </div>
+        );
   }
 }
 
