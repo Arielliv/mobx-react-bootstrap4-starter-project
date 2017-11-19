@@ -9,10 +9,10 @@ export interface ILogModalDB extends ILogModel, Document {
 
 export let LogSchema: Schema = new Schema({
     createdAt: Date,
-    id : ObjectID,
+    id:String,
     name : String,
     path : String,
-    regularExpressions : [RegularExpression],
+    regularExpressions : [],
     typeRolling: String,
     typeSpecial : String,
     startLine : String,

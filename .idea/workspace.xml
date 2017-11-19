@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a13f186-f5f8-431b-b021-6c5ceb5b74e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/schemas/LogSchema.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/schemas/RegularExpressionSchema.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/services/LogService.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/controllers/logController.ts" afterPath="$PROJECT_DIR$/server/controllers/LogController.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx" afterPath="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.ts" afterPath="$PROJECT_DIR$/server/app.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/LogController.ts" afterPath="$PROJECT_DIR$/server/controllers/LogController.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/LogRouter.ts" afterPath="$PROJECT_DIR$/server/routes/LogRouter.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/schemas/LogSchema.ts" afterPath="$PROJECT_DIR$/server/schemas/LogSchema.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/LogService.ts" afterPath="$PROJECT_DIR$/server/services/LogService.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,12 +19,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LogController.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controllers/LogController.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="361">
+              <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+              <folding>
+                <element signature="e#1#65#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,9 +44,35 @@
       <file leaf-file-name="LogService.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/services/LogService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="401">
+              <caret line="80" column="44" lean-forward="false" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+              <folding>
+                <element signature="e#1#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogRouter.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/LogRouter.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,9 +80,11 @@
       <file leaf-file-name="LogSchema.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/schemas/LogSchema.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="440">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,21 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IRegularExpressionModel.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/models/IRegularExpressionModel.ts">
+      <file leaf-file-name="ILogModel.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/models/ILogModel.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="3" column="30" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="360">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="9" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ILogModel.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/models/ILogModel.ts">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="440">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,9 +124,11 @@
       <file leaf-file-name="app.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/app.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="520">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/constants/stores.ts" />
         <option value="$PROJECT_DIR$/src/app/containers/Root/index.tsx" />
         <option value="$PROJECT_DIR$/src/app/components/GeneralComponents/AlertContainer/index.tsx" />
         <option value="$PROJECT_DIR$/src/app/stores/AlertStore.tsx" />
@@ -175,7 +216,6 @@
         <option value="$PROJECT_DIR$/server/index.ts" />
         <option value="$PROJECT_DIR$/server/routes/logRoutes.ts" />
         <option value="$PROJECT_DIR$/server/routes/HeroRouter.ts" />
-        <option value="$PROJECT_DIR$/server/app.ts" />
         <option value="$PROJECT_DIR$/server/controllers/logController.ts" />
         <option value="$PROJECT_DIR$/client/src/app/containers/GeneralContainer/MainRoutes/index.tsx" />
         <option value="$PROJECT_DIR$/client/src/app/components/GeneralComponents/NavBarContainer/index.tsx" />
@@ -185,11 +225,13 @@
         <option value="$PROJECT_DIR$/client/src/app/containers/BuildLogContainer/Form/index.tsx" />
         <option value="$PROJECT_DIR$/client/src/app/stores/LogArrayStore.tsx" />
         <option value="$PROJECT_DIR$/client/src/app/containers/ViewLogContainer/LogViewWindow/index.tsx" />
-        <option value="$PROJECT_DIR$/server/controllers/LogController.ts" />
-        <option value="$PROJECT_DIR$/server/routes/LogRouter.ts" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/server/schemas/RegularExpressionSchema.ts" />
+        <option value="$PROJECT_DIR$/server/app.ts" />
+        <option value="$PROJECT_DIR$/server/routes/LogRouter.ts" />
+        <option value="$PROJECT_DIR$/server/controllers/LogController.ts" />
         <option value="$PROJECT_DIR$/server/schemas/LogSchema.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx" />
         <option value="$PROJECT_DIR$/server/services/LogService.ts" />
       </list>
     </option>
@@ -253,11 +295,6 @@
             <path>
               <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-mobx-typescript-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-mobx-typescript-project" type="b2602c69:ProjectViewProjectNode" />
@@ -794,7 +831,7 @@
       <workItem from="1510132657546" duration="14577000" />
       <workItem from="1510924735272" duration="13000" />
       <workItem from="1510924766945" duration="11000" />
-      <workItem from="1510924856984" duration="3205000" />
+      <workItem from="1510924856984" duration="10388000" />
     </task>
     <task id="LOCAL-00001" summary="the holidays">
       <created>1507995721521</created>
@@ -859,11 +896,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510573862535</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="10 - before start work on the service">
+      <created>1511126320054</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511126320055</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269811000" />
+    <option name="totallyTimeSpent" value="276994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
@@ -919,7 +963,8 @@
     <MESSAGE value="7 - before new way to use bootstrap" />
     <MESSAGE value="8 - fixed the rlt bootstrap after the local bootstrap update" />
     <MESSAGE value="9 - nodejs works, delete , post , get , put - before react promise" />
-    <option name="LAST_COMMIT_MESSAGE" value="9 - nodejs works, delete , post , get , put - before react promise" />
+    <MESSAGE value="10 - before start work on the service" />
+    <option name="LAST_COMMIT_MESSAGE" value="10 - before start work on the service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -928,20 +973,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/RegularExpression/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mobx/lib/mobx.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-600">
@@ -1147,14 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="12" column="73" lean-forward="false" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/containers/BuildLogContainer/Form/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -1205,36 +1228,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/LogRouter.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-319">
-          <caret line="92" column="21" lean-forward="false" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/models/ILogModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1257,35 +1254,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/schemas/LogSchema.ts">
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/mongoose/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+        <state relative-caret-position="361">
+          <caret line="2397" column="4" lean-forward="false" selection-start-line="2397" selection-start-column="4" selection-end-line="2397" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/LogController.ts">
+    <entry file="file://$PROJECT_DIR$/server/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        <state relative-caret-position="440">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="520">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/ILogModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="9" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/schemas/LogSchema.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/BuildLogComponents/Log/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/LogRouter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/LogController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="e#1#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/services/LogService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="401">
+          <caret line="80" column="44" lean-forward="false" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+          <folding>
+            <element signature="e#1#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

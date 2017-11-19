@@ -17,12 +17,15 @@ export class LogRouter {
      * GET all Heroes.
      */
     public static getAll(req: Request, res: Response, next: NextFunction) {
-        res.status(200)
-            .send({
-                message: 'Success',
-                status: res.status,
-                logs:LogController.getLogs
-            });
+        LogController.getLogs.then(function (result) {
+            res.status(200)
+                .send({
+                    message: 'Success',
+                    status: res.status,
+                    logs:result
+                });
+        });
+
     }
 
     /**

@@ -3,6 +3,7 @@ import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 import * as routes from './routes/index';
+import * as mongoose from "mongoose";
 import {LogRouter, logRoutes} from "./routes/LogRouter";
 
 // Creates and configures an ExpressJS web server.
@@ -14,8 +15,21 @@ class App {
     //Run configuration methods on the Express instance.
     constructor() {
         this.app = express();
+        // Mongo
+        this.connectToMongo();
         this.middleware();
         this.routes();
+    }
+
+
+    /**
+     * Connect to mongo
+     */
+    private connectToMongo() {
+
+        //
+        // Connect to mongo using mongoose
+        mongoose.connect('mongodb://localhost/test');
     }
 
     // Configure Express middleware.
@@ -24,6 +38,7 @@ class App {
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: false }));
     }
+
 
     // Configure API endpoints.
     private routes(): void {

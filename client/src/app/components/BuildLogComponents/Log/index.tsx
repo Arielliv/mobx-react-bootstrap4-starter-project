@@ -30,7 +30,7 @@ export class Log extends React.Component<LogProps, LogState> {
         super(props);
 
 
-        this.state = { name: this.props.name , path : this.props.name  ,regularExpressions : this.props.regularExpressions};
+        this.state = { name: this.props.name , path : this.props.path  ,regularExpressions : this.props.regularExpressions};
 
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangePath = this.onChangePath.bind(this);
@@ -93,7 +93,7 @@ export class Log extends React.Component<LogProps, LogState> {
                     </div>
                 </AvGroup>
                 <AvGroup className="form-row">
-                    <Label for="path" className="col-12 p-0">שם לוג</Label>
+                    <Label for="path" className="col-12 p-0">נתיב לוג</Label>
                     <AvInput type="text" name="path" id="path" placeholder="הכנס טקסט" className="col-12" value={this.state.path} onChange={this.onChangePath} required />
                     {/* this only shows when there is an error, use reactstrap's FormFeedback if you want is to always be displayed */}
                     <div style={divStyle}>
