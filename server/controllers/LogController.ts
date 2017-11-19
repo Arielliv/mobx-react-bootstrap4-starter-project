@@ -38,4 +38,4 @@ export class controller {
         });
     }
 }
-export let logController = new controller([]);
+export let LogController = new controller([]);

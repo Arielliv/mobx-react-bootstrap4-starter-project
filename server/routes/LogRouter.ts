@@ -1,5 +1,5 @@
 import {Router, Request, Response, NextFunction} from 'express';
-import {logController} from "../controllers/logController";
+import {LogController} from "../controllers/LogController";
 import {ILogModel} from "../../client/src/app/models/ILogModel";
 
 export class LogRouter {
@@ -21,7 +21,7 @@ export class LogRouter {
             .send({
                 message: 'Success',
                 status: res.status,
-                logs:logController.getLogs
+                logs:LogController.getLogs
             });
     }
 
@@ -30,7 +30,7 @@ export class LogRouter {
      */
     public static getOne(req: Request, res: Response, next: NextFunction) {
         let id = req.params.id;
-        let log = logController.getLog(id);
+        let log = LogController.getLog(id);
         if (log) {
             res.status(200)
                 .send({
@@ -55,7 +55,7 @@ export class LogRouter {
             .send({
                 message: 'Success',
                 status: res.status,
-                count:logController.logsCount
+                count:LogController.logsCount
             });
     }
     /**
@@ -63,7 +63,7 @@ export class LogRouter {
      */
     public static addLog(req: Request, res: Response, next: NextFunction) {
         let log : ILogModel = req.body;
-        logController.addLog(log);
+        LogController.addLog(log);
         res.status(200)
             .send({
                 message: 'Success',
@@ -77,7 +77,7 @@ export class LogRouter {
     public static deleteLog(req: Request, res: Response, next: NextFunction) {
         console.log(req.query.id);
         let id : string = req.query.id;
-        logController.deleteLog(id);
+        LogController.deleteLog(id);
         res.status(200)
             .send({
                 message: 'Success',
@@ -90,7 +90,7 @@ export class LogRouter {
      */
     public static editLog(req: Request, res: Response, next: NextFunction) {
         let log : ILogModel = req.body;
-        logController.editLog(log);
+        LogController.editLog(log);
         res.status(200)
             .send({
                 message: 'Success',
