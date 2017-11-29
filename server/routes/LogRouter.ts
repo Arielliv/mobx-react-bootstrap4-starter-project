@@ -1,23 +1,38 @@
 import {Router, Request, Response, NextFunction} from 'express';
 import {LogController} from "../controllers/LogController";
 import {ILogModel} from "../../client/src/app/models/ILogModel";
+import {LogService} from "../services/LogService";
+import {ILogService} from "../interfaces/ILogService";
 
 export class LogRouter {
     router: Router;
-
+    private logController : LogController;
     /**
      * Initialize the HeroRouter
      */
-    constructor() {
+    constructor(logService : ILogService) {
         this.router = Router();
+        this.logController = new LogController(logService);
         this.init();
+    }
+    /**
+     * Take each handler, and attach to one of the Express.Router's
+     * endpoints.
+     */
+    init() {
+        this.router.get('/count', this.getCount.bind(this));
+        this.router.get('/', this.getAll.bind(this));
+        this.router.get('/:id', this.getOne.bind(this));
+        this.router.post('/add', this.addLog.bind(this));
+        this.router.delete('/delete', this.deleteLog.bind(this));
+        this.router.put('/edit', this.editLog.bind(this));
     }
 
     /**
      * GET all Heroes.
      */
-    public static getAll(req: Request, res: Response, next: NextFunction) {
-        LogController.getLogs.then(function (result) {
+    public getAll(req: Request, res: Response, next: NextFunction) {
+        this.logController.getLogs.then(function (result) {
             res.status(200)
                 .send({
                     message: 'Success',
@@ -31,9 +46,9 @@ export class LogRouter {
     /**
      * GET one log by id
      */
-    public static getOne(req: Request, res: Response, next: NextFunction) {
+    public getOne(req: Request, res: Response, next: NextFunction) {
         let id = req.params.id;
-        let log = LogController.getLog(id);
+        let log = this.logController.getLog(id);
         if (log) {
             res.status(200)
                 .send({
@@ -53,20 +68,20 @@ export class LogRouter {
     /**
      * GET logs count
      */
-    public static getCount(req: Request, res: Response, next: NextFunction) {
+    public getCount(req: Request, res: Response, next: NextFunction) {
         res.status(200)
             .send({
                 message: 'Success',
                 status: res.status,
-                count:LogController.logsCount
+                count:this.logController.logsCount
             });
     }
     /**
      * POST log
      */
-    public static addLog(req: Request, res: Response, next: NextFunction) {
+    public addLog(req: Request, res: Response, next: NextFunction) {
         let log : ILogModel = req.body;
-        LogController.addLog(log);
+        this.logController.addLog(log);
         res.status(200)
             .send({
                 message: 'Success',
@@ -77,10 +92,10 @@ export class LogRouter {
     /**
      * DELETE log
      */
-    public static deleteLog(req: Request, res: Response, next: NextFunction) {
+    public deleteLog(req: Request, res: Response, next: NextFunction) {
         console.log(req.query.id);
         let id : string = req.query.id;
-        LogController.deleteLog(id);
+        this.logController.deleteLog(id);
         res.status(200)
             .send({
                 message: 'Success',
@@ -91,9 +106,9 @@ export class LogRouter {
     /**
      * PUT log
      */
-    public static editLog(req: Request, res: Response, next: NextFunction) {
+    public editLog(req: Request, res: Response, next: NextFunction) {
         let log : ILogModel = req.body;
-        LogController.editLog(log);
+        this.logController.editLog(log);
         res.status(200)
             .send({
                 message: 'Success',
@@ -101,22 +116,9 @@ export class LogRouter {
                 log
             });
     }
-    /**
-     * Take each handler, and attach to one of the Express.Router's
-     * endpoints.
-     */
-    init() {
-        this.router.get('/count', LogRouter.getCount);
-        this.router.get('/', LogRouter.getAll);
-        this.router.get('/:id', LogRouter.getOne);
-        this.router.post('/add', LogRouter.addLog);
-        this.router.delete('/delete', LogRouter.deleteLog);
-        this.router.put('/edit', LogRouter.editLog);
-    }
-
 }
 
 // Create the HeroRouter, and export its configured Express.Router
 
 
-export let logRoutes = new LogRouter();
+export let logRoutes = new LogRouter(new LogService());

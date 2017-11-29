@@ -1,48 +1,36 @@
 
 import {ILogModel} from "../../client/src/app/models/ILogModel";
-import {LogService} from "../services/LogService";
+import {ILogService} from "../interfaces/ILogService";
 
-export class controller {
+export class LogController {
 
+    private logService : ILogService;
 
-
-    constructor() {
-
+    constructor(logService : ILogService) {
+        this.logService = logService;
     }
 
     public get getLogs() : any {
-        return LogService.getLogs;
-        // return this.logs;
+        return this.logService.getLogs;
     }
 
-    public get logsCount() :  number {
-        return LogService.logsCount;
-        // return this.logs.length;
+    public get logsCount() :  any {
+        return this.logService.logsCount;
     }
 
     public getLog(id:string) {
-        return LogService.getLog(id);
-        // return this.logs.filter((log) => log.id === id);
+        return this.logService.getLog(id);
     }
 
     public addLog(item: ILogModel): void {
-        LogService.addLog(item);
-        // this.logs.push(item);
+        this.logService.addLog(item);
     }
 
     public deleteLog(id: string): void {
-        LogService.deleteLog(id);
-        // this.logs = this.logs.filter((log) => log.id !== id);
+        this.logService.deleteLog(id);
     }
 
     public editLog( data: ILogModel): void {
-        LogService.editLog(data);
-        // this.logs = this.logs.map((log) => {
-        //     if (log.id === data.id) {
-        //         log = data;
-        //     }
-        //     return log;
-        // });
+        this.logService.editLog(data);
     }
 }
-export let LogController = new controller();
